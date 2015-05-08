@@ -1,0 +1,8 @@
+.social-icons {
+    a {
+        color: $icon-font-color;
+        &:hover {
+            color: $icon-hover-color;
+        }
+    }
+}

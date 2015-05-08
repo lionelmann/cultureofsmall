@@ -1,0 +1,13 @@
+body {
+	//position: relative;
+}
+
+.wrapper {
+    @include outer-container;
+
+}
+
+article {
+    
+    //padding: 2em;    
+}

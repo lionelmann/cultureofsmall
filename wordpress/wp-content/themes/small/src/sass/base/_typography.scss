@@ -1,0 +1,128 @@
+body {
+    //background:url('dist/images/bg-body.png');
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $unitless-line-height;
+    box-shadow: inset 0px 0px 85px rgba(0,0,0,.3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $header-font-color;
+    font-family: $header-font-family;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+h1 { 
+    font-size: modular-scale(3);
+    @include media($bp-large) {
+        font-size: modular-scale(6);
+    }
+}
+
+h2 { 
+    font-size: modular-scale(2);
+    color: $footer-background-color;
+    @include media($bp-large) {
+        font-size: modular-scale(5); 
+        margin-bottom: 0em;
+    } 
+}
+
+h3 { 
+    font-size: modular-scale(2); 
+    @include media($bp-large) {
+        font-size: modular-scale(4); 
+    }
+}
+
+h4 { 
+    font-size: modular-scale(1); 
+    @include media($bp-large) {
+        font-size: modular-scale(3);
+        &.crew-name {
+            margin: 0;
+            color: $footer-background-color;
+        }
+    }
+}
+
+h5 { 
+    font-size: modular-scale(2); 
+    @include media($bp-large) {
+        font-size: modular-scale(2);
+    }
+    footer &  {
+        text-transform: uppercase;
+        margin-bottom: 0.25em;
+        color: $footer-font-color;
+    }
+    &.sponsor-headline {
+        color: $footer-font-color;
+        margin: 0;
+    }
+}
+
+h6 { 
+    font-size: modular-scale(1);
+    &.crew-title {
+        margin: 0 0 .5em 0;
+    }
+}
+
+p, ul, ol {
+    list-style-type: disc;
+    font-size: $base-font-size;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+footer { 
+    ul, ol {
+        list-style-type: none;
+        margin-left: -40px;
+        li {
+            margin-bottom: 1.5em;
+        }
+    }
+    p, li {
+        font-size: 0.9em;
+    }
+}
+
+a {
+    @include transition(color 0.1s linear);
+    color: $base-link-color;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        color: $hover-link-color;
+    }
+    &:active {
+        color: $hover-link-color;
+        outline: none;
+    }
+    footer & {
+        color: $footer-font-color;
+        &:hover {
+            color: $footer-hover-color;
+        }
+    }
+}
+
+hr {
+    border-bottom: 1px solid $base-border-color;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-line-height 0;
+}
+
+blockquote {
+    border-left: 2px solid $base-border-color;
+    color: lighten($base-font-color, 15);
+    margin: $base-line-height 0;
+    padding-left: $base-line-height / 2;
+}

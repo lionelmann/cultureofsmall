@@ -1,0 +1,23 @@
+%button {
+    -webkit-font-smoothing: antialiased;
+    background-color: $button-background-color;
+    border-radius: $base-border-radius;
+    color: $button-font-color;
+    display: inline-block;
+    font-size: 1.7em;
+    font-family: $sans-serif-condensed;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.2em 1em 0.2em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    &:hover {
+        background-color: $button-background-hover;
+        color: $white;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}

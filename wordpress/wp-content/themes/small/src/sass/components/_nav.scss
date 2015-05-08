@@ -1,0 +1,45 @@
+.menu-link {
+    position:fixed;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+    }
+}
+
+.nav-trigger {
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="menu-main"] {
+    position: fixed;
+    top: 40px;
+    right:0;
+    z-index: 20000;
+    font-family: $sans-serif;
+}
+.nav-trigger:checked + label {
+    right: 250px;
+    font-size:0;
+    height:0;
+    padding:0;
+    &:after {
+        content:'X';
+        display:block;
+    }
+}
+.nav-trigger ~ nav {
+    right: -250px;
+}
+.nav-trigger:checked ~ nav {
+    right: 0px;
+}
+ 
+.nav-trigger:checked ~ #site-wrap {
+    right: 250px;
+}
+
+.nav-trigger + label, #site-wrap {
+    transition: right 0.2s;
+}
