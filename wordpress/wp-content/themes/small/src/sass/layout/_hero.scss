@@ -2,20 +2,19 @@ section[role=slider] {
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
-    background-color: rgba(0, 0, 0, 0.2);
+    //background-color: rgba(0, 0, 0, 0.2);
     background-size: cover;
     background-position: center center;
     height: 100vh;
     text-align: center;
     img {
-        width: 70%;
+        width: 60%;
     }
 }
 
 .hero {
-    height: 400px;
-    width: 100%;
-    background: #333;
+    height: 300px;
+    width: 75%;
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
