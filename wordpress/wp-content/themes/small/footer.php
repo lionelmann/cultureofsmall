@@ -24,7 +24,7 @@
 
 <script>
     (function($){
-        $('#Container').mixItUp();
+        $('#container').mixItUp();
         $('.anchor').click(function(e) {
             e.preventDefault();
         });

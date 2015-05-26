@@ -2,14 +2,9 @@ body {
 	//position: relative;
 }
 
-.wrapper {
-    @include outer-container;
-
-}
-
 main {
 	@include outer-container;
-	@include pad(0 2em 0 2em);
+	@include pad(2em);
 }
 
 article {
