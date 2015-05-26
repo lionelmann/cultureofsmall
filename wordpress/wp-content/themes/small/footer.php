@@ -15,7 +15,7 @@
 <!-- Copyright-->
 <section class="copyright">
     <div class="inner">
-        <small>Copyright &#169; 2015</small>    
+        <small>Copyright &#169; <?php echo date('Y')?></small>    
     </div>
 </section>
 
@@ -23,22 +23,15 @@
 <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
 
 <script>
-// On document ready:
-
-$(function(){
-
-    // Instantiate MixItUp:
-
-    $('#Container').mixItUp();
-
-    $('.anchor').click(function(e) {
-    e.preventDefault();
-});
-
-});
+    (function($){
+        $('#Container').mixItUp();
+        $('.anchor').click(function(e) {
+            e.preventDefault();
+        });
+    })(jQuery);
 </script>
 
-<?php //wp_footer();?>
+<?php wp_footer();?>
 
 </body>
 </html>
