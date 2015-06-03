@@ -6,6 +6,7 @@ node_modules/
 
 # Wordpress specific
 
+wordpress/*
 wp-config.php
 uploads/
 upgrade/*

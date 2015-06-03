@@ -222,7 +222,7 @@ class Cuztom_Initializer
 		$current_dir = $explode_path[count( $explode_path ) - 1];
 		array_push( $url, $current_dir );
 		
-		if( $current_dir == 'wp-content' )
+		if( $current_dir == 'custom' )
 		{
 			// Build new paths
 			$path = '';
