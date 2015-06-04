@@ -35,20 +35,29 @@
                     $title          = $term->name;
                     $population     = $meta_data['_population'];
                     $map            = $meta_data['_map'];
-                    $income         = $meta_data['_income'];
+                    //$income         = $meta_data['_income'];
+                    $distance       = $meta_data['_distance'];
+                    $income_select  = $meta_data['_income_select'];
+                    $city           = $meta_data['_city'];
 
                     echo '<h6>' . $title . '</h6>';
                     if($description):
                         echo $description;
                     endif;
                     if($population):
-                        echo '<li>' . $population . '</li>';
+                        echo '<li>' . $population . ' people'. '</li>';
                     endif;
                     if($map):
                         echo '<li>' . $map . '</li>';
                     endif;
                     if($income):
                         echo '<li>' . $income . '</li>';
+                    endif;
+                    if($distance && $city):
+                        echo '<li>' . $distance . 'km' . ' to ' . $city . '</li>';
+                    endif;
+                    if($income_select):
+                        echo '<li>' . '$' . $income_select . '/per year' . '</li>';
                     endif;
                 }
                 echo '</ul>';   
