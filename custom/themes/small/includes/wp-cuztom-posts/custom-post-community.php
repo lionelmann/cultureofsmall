@@ -18,6 +18,7 @@ $community->add_term_meta (
             'type'          => 'select',
             'options'       => array(
                 'none'      => '',
+                '10,000'        => '10',
                 '20,000'        => '20',
                 '30,000'        => '30',
                 '40,000'        => '40',
