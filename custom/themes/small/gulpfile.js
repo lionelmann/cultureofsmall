@@ -15,6 +15,7 @@ var outputDir = 'dist';
 var scriptList = [
 	'src/components/modernizer/modernizr.js',
 	'src/components/jquery/dist/jquery.js',
+    'src/js/custom/jvette.js',
 ];
 
 var fontIcons = [

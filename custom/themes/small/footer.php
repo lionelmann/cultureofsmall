@@ -19,8 +19,27 @@
     </div>
 </section>
 
+<?php wp_footer();?>
+
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<script>
+;(function($, jVette) {
+    jVette && jVette({slide: { duration: 250, easing: 'easeInOutQuad' }});
+
+    $('#jvette').on('mouseenter', 'a', function()
+    {
+        $(this).addClass('hover');
+
+    }).on('mouseleave', 'a', function()
+    {
+        $(this).delay(250).removeClass('hover');
+    });
+
+})(window.jQuery, window.jVette);
+</script>
 
 <script>
     (function($){
@@ -30,8 +49,6 @@
         });
     })(jQuery);
 </script>
-
-<?php wp_footer();?>
 
 </body>
 </html>

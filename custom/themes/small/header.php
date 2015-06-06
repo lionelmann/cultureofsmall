@@ -18,10 +18,23 @@
     <?php //include_once("analyticstracking.php") ?>
 
     <section role="banner">
-        <header>
-                <div class="logo">
+        <header class="jv-fixed">
+            <div class="logo">
                 <img src="http://placehold.it/150x70&text=Small Logo">
-                </div>
+            </div>
+            <div>
+                <button class="btn" data-jv-trigger="left"></button>
+                <button class="btn" data-jv-trigger="right"></button>  
+                <nav data-jv-content="left" data-jv-order="0">
+                    <ul role="navigation">
+                        <li>Left</li>                                                                                                                                                                         
+                    </ul>
+                </nav>
+                <nav data-jv-content="right" data-jv-order="0">
+                    <ul role="navigation">
+                        <li>Right</li>                                                                                                                                                                        
+                    </ul>
+                </nav>                    
+            </div>
         </header>
     </section>
-

@@ -6,8 +6,9 @@ section[role=banner] {
       @include outer-container;
       @include pad(0 2em 0 2em);
         .logo {
-            max-width: 275px;
+            //max-width: 275px;
             @include pad(0.3em 0 0 0em);
+            text-align: center;
         }
     }
 }
