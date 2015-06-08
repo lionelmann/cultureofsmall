@@ -27,7 +27,13 @@
 
 <script>
 ;(function($, jVette) {
-    jVette && jVette({slide: { duration: 250, easing: 'easeInOutQuad' }});
+
+    jVette && jVette({
+        slide: { 
+            duration: 350, 
+            easing: 'easeInOutQuad' 
+        }
+    });
 
     $('#jvette').on('mouseenter', 'a', function()
     {

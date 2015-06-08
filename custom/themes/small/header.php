@@ -10,6 +10,7 @@
     <meta property="og:title" content="<?php bloginfo('name') ?>">
     <meta property="og:image" content="">
     <link rel='stylesheet' href='<?php bloginfo('template_url' ); ?>/style.css' async='async' type='text/css' media='all' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <?php wp_head(); ?>
 </head>
 
@@ -18,23 +19,16 @@
     <?php //include_once("analyticstracking.php") ?>
 
     <section role="banner">
-        <header class="jv-fixed">
-            <div class="logo">
-                <img src="http://placehold.it/150x70&text=Small Logo">
-            </div>
-            <div>
-                <button class="btn" data-jv-trigger="left"></button>
-                <button class="btn" data-jv-trigger="right"></button>  
-                <nav data-jv-content="left" data-jv-order="0">
-                    <ul role="navigation">
-                        <li>Left</li>                                                                                                                                                                         
-                    </ul>
-                </nav>
-                <nav data-jv-content="right" data-jv-order="0">
-                    <ul role="navigation">
-                        <li>Right</li>                                                                                                                                                                        
-                    </ul>
-                </nav>                    
-            </div>
+        <header>
+            <button class="btn" data-jv-trigger="left" /></button>
+            <button class="btn" data-jv-trigger="right" /></button>
+           
+            <nav data-jv-content="left">
+                <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
+            </nav>
+            <nav data-jv-content="right">
+                <?php wp_nav_menu( array( 'theme_location' => 'left-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>                
+            </nav>
+          
         </header>
     </section>

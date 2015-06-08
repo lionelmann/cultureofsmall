@@ -19,9 +19,9 @@ Version: 1.0
 
 @import "helpers/variables";
 //@import "helpers/extends/flashes";
-@import "helpers/extends/button";
-@import "helpers/extends/clearfix";
-@import "helpers/extends/hide-text";
+//@import "helpers/extends/button";
+//@import "helpers/extends/clearfix";
+//@import "helpers/extends/hide-text";
 
 @import "base/typography";
 @import "base/wp_core";
@@ -32,13 +32,10 @@ Version: 1.0
 @import "layout/hero";
 @import "layout/copyright";
 
-@import "components/arrow";
 @import "components/avatar";
-@import "components/buttons";
-@import "components/forms";
+//@import "components/buttons";
 @import "components/nav";
 
-
-@import "vendors/font-awesome";
-@import "vendors/animate";
+//@import "vendors/font-awesome";
+//@import "vendors/animate";
 @import "vendors/jvette";
