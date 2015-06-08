@@ -33,6 +33,7 @@
                     $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
                     $description    = term_description($term->term_id, $term->taxonomy );
                     $title          = $term->name;
+                    $slug           = $term->slug;
                     $population     = $meta_data['_population'];
                     $map            = $meta_data['_map'];
                     //$income         = $meta_data['_income'];
@@ -40,7 +41,8 @@
                     $income_select  = $meta_data['_income_select'];
                     $city           = $meta_data['_city'];
 
-                    echo '<h6>' . $title . '</h6>';
+                    echo '<a href="' . get_term_link($term->term_id, $term->taxonomy) . '"><h6>' . $title . '</h6></a>';                   
+
                     if($description):
                         echo $description;
                     endif;
@@ -56,13 +58,19 @@
                     if($distance && $city):
                         echo '<li>' . $distance . 'km' . ' to ' . $city . '</li>';
                     endif;
-                    if($income_select):
+                    if($income_select != "none"):
                         echo '<li>' . '$' . $income_select . '/per year' . '</li>';
                     endif;
                 }
                 echo '</ul>';   
+
             }
         ?>
+        <p>This post is part of:</p>
+        <?php the_category();?>
+         <p>Most recent posts: </p>
+        <?php recentposts(); ?>
+        
     </aside>
 </main>
 
