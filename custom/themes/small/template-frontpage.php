@@ -39,6 +39,8 @@ $loop = new WP_Query($args); ?>
 
 <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
+    <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "medium" ); ?>
+
     <?php $category_classes = ''; ?>
 
     <?php $categories = get_the_terms($post->ID , 'category'); 
@@ -57,31 +59,14 @@ $loop = new WP_Query($args); ?>
     }; 
     ?>
     <a href="<?php the_permalink(); ?>">
-    <div class="mix<?php echo $category_classes; ?>" data-myorder="1" style="background: rgba(41, 64, 93, 1)">
-    <?php the_title(); ?>
-    <p><?php echo $category_classes; ?> <?php echo $population; ?>
-    </p>
-    
-
+    <div class="mix<?php echo $category_classes; ?>" data-myorder="1" style="background-image: url(<?php echo $src[0]; ?>);">
+        <?php the_title(); ?>
     </div>
-</a>
+    </a>
 <?php endwhile; endif; ?>
+
 
 </div>  
 </main>
 
-<!--
-    <div id="container">
-        <div class="mix category-1" data-myorder="1" style="background: rgba(41, 64, 93, 1)">1</div>
-        <div class="mix category-2" data-myorder="2" style="background: rgba(155, 28, 45, 1);">2</div>
-        <div class="mix category-1" data-myorder="3" style="background: rgba(41, 64, 93, 1)">1</div>
-        <div class="mix category-2" data-myorder="4" style="background: rgba(155, 28, 45, 1);">2</div>
-        <div class="mix category-1" data-myorder="5" style="background: rgba(41, 64, 93, 1)">1</div>
-        <div class="mix category-2" data-myorder="6" style="background: rgba(155, 28, 45, 1);">2</div>
-        <div class="mix category-3" data-myorder="7" style="background: rgba(126, 174, 222, 1)">3</div>
-        <div class="mix category-4" data-myorder="8" style="background: rgba(215, 221, 223, 1)">4</div>
-        <div class="mix category-3" data-myorder="9" style="background: rgba(126, 174, 222, 1)">3</div>
-    </div>  
-</main>
--->
 <?php get_footer();?>
