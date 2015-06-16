@@ -12,7 +12,9 @@ get_header();?>
 <section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
     <header>
         <hgroup>
-            <h1 class="page-headline"><?php the_title();?><h1>
+            <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"><br>
+            <p class="tagline">from natural to cultural resources | a network for small communities</p>
+            <!--<h1 class="page-headline"><?php the_title();?><h1>-->
         </hgroup>
     </header>
 </section>

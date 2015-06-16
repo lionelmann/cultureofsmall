@@ -1,0 +1,52 @@
+.jv-open, .jv-opened {
+    background: #fff;
+}
+
+[data-jv-content], [data-jv-panel] {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    z-index: -10000;
+    width: 84%;
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 2em;
+        li {
+            padding: .4em .4em .5em .4em;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            &:hover {
+                background-color: rgba(255,255,255,.2);
+            }
+        }
+        
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            color: #fff;
+            
+        }
+    }
+}
+
+.btn {
+    float:right;
+    font: normal normal normal 14px/1 FontAwesome;
+    margin: .9em;
+    touch-action: manipulation;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 150%;
+    color: #fff;
+    background-color: transparent;
+    &:before {
+        content:"\f0c9";
+    }
+    &.jv-active:before {
+        content:"\f00d";
+    }
+}

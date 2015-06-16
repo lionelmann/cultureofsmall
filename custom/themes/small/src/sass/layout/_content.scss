@@ -1,7 +1,3 @@
-body {
-	//position: relative;
-}
-
 main {
 	@include outer-container;
 	@include pad(2em);

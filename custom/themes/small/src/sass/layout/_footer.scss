@@ -1,7 +1,6 @@
 footer {
-    background-color: #333;
+    background-color: $footer-background-color;
     color: $footer-font-color;
-    height: 250px;
     .inner {
         @include outer-container;
         @include pad(2em);

@@ -1,8 +1,8 @@
-$sans-serif: "futura-pt",sans-serif;
-$sans-serif-condensed: "futura-pt-condensed",sans-serif;
+$sans-serif: 'Open Sans', sans-serif;
+$cursive: 'Corben', cursive;
 
 $base-font-family: $sans-serif;
-$header-font-family: $sans-serif-condensed;
+$header-font-family: $cursive;
 
 // Sizes
 $base-font-size: 1em;
@@ -14,15 +14,13 @@ $header-line-height: $base-font-size * 1.25;
 $base-border-radius: em(3);
 
 // Colors
-$blue: 			rgba(41, 64, 93, 1);
+$blue: 			rgba(61,152,216, 1);
 $red: 			rgba(155, 28, 45, 1);
 $white: 		rgba(255,255,255, 1);
 $black: 		rgba(0, 0, 0, 1);
-$paper:			rgba(215, 221, 223, 1);
 $light-blue:	rgba(126, 174, 222, 1);
 
 // Background Color
-$base-background-color: $paper;
 $footer-background-color: $blue;
 $button-background-color: $light-blue;
 $button-background-hover: $red;
@@ -33,6 +31,7 @@ $border-background-color: $light-blue;
 $base-font-color: $black;
 $base-accent-color: $blue;
 $footer-font-color: $white;
+$light-font-color: $white;
 $header-font-color: $light-blue;
 $button-font-color: $white;
 $icon-font-color: $blue;

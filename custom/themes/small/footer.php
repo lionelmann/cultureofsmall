@@ -4,10 +4,16 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porta elit a pharetra.</p>
         </div>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porta elit a pharetra.</p>
+        <p>Submit your stories</p>
+        <form>
+            <input type="text" name="email" placeholder="Email">
+            </form>    
         </div>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porta elit a pharetra.</p>
+            <p>
+            <i class="fa fa-facebook-square fa-3x"></i>
+            <i class="fa fa-twitter-square fa-3x"></i>
+            <i class="fa fa-rss-square fa-3x"></i></p>
         </div>
     </div>
 </footer>
@@ -15,7 +21,7 @@
 <!-- Copyright-->
 <section class="copyright">
     <div class="inner">
-        <small>Copyright &#169; <?php echo date('Y')?></small>    
+        <small>&#169; Copyright <?php echo date('Y')?> E.R.A. Architects Inc.</small>  
     </div>
 </section>
 
