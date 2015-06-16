@@ -20,15 +20,9 @@
 
     <section role="banner">
         <header>
-            <button class="btn" data-jv-trigger="left" /></button>
             <button class="btn" data-jv-trigger="right" /></button>
-           
-            <nav data-jv-content="left">
+            <nav data-jv-content="right">
                 <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
             </nav>
-            <nav data-jv-content="right">
-                <?php wp_nav_menu( array( 'theme_location' => 'left-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>                
-            </nav>
-          
         </header>
     </section>

@@ -1,11 +1,20 @@
 <?php 
 /*
- * Template Name: MixitUP
+ * Template Name: Home
  */
 get_header();?>
 
-<section class="hero">
-    <h1>Beautiful Image</h1>
+ <!-- Get post thumbnail url -->
+<?php
+    $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "half-banner" );
+?>
+
+<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
+    <header>
+        <hgroup>
+            <h1 class="page-headline"><?php the_title();?><h1>
+        </hgroup>
+    </header>
 </section>
 
 <main>
@@ -59,7 +68,7 @@ $loop = new WP_Query($args); ?>
     }; 
     ?>
     <a href="<?php the_permalink(); ?>">
-    <div class="mix<?php echo $category_classes; ?>" data-myorder="1" style="background-image: url(<?php echo $src[0]; ?>);">
+    <div class="mix<?php echo $category_classes; ?> desaturate" data-myorder="1" style="background-image: url(<?php echo $src[0]; ?>);">
         <?php the_title(); ?>
     </div>
     </a>
