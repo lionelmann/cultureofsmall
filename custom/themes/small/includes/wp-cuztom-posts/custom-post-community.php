@@ -63,9 +63,15 @@ $community->add_term_meta (
                 'type'        => 'text'
             ),
            	array(
-                'name'        => 'map',
-                'label'       => 'Google map',
-                'description' => 'Google map url',
+                'name'        => 'map_lat',
+                'label'       => 'Google Map Latitude',
+                'description' => 'ex: <i>2.357188</i>. Go to <a href="https://support.google.com/maps/answer/18539?hl=en" target="_blank">Google support</a> for help finding coordinates', 
+                'type'        => 'text'
+            ),
+            array(
+                'name'        => 'map_lng',
+                'label'       => 'Google Map Longitude',
+                'description' => 'ex: <i>48.867442</i>. Go to <a href="https://support.google.com/maps/answer/18539?hl=en" target="_blank">Google support</a> for help finding coordinates', 
                 'type'        => 'text'
             ),
             array(
