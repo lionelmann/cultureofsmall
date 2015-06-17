@@ -52,6 +52,15 @@ h6 {
     font-size: modular-scale(1);
 }
 
+.headline {
+    color: #fff;
+}
+
+.single article p:first-of-type {
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
 p, ul, ol {
     list-style-type: disc;
     font-size: $base-font-size;
@@ -62,6 +71,7 @@ p, ul, ol {
 a {
     @include transition(color 0.1s linear);
     color: $base-link-color;
+    text-decoration: none;
     &:hover {
         color: $hover-link-color;
     }

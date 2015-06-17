@@ -1,16 +1,30 @@
 main {
 	@include outer-container;
-	@include pad(2em);
+	@include pad(4em 2em 3em 2em);
 }
 
 article {
 	@include media($bp-large) {
-		@include span-columns(8);
+		@include span-columns(6.5);
     }
 }
 
 aside {
 	@include media($bp-large) {
+		@include shift(1.5);
 		@include span-columns(4);
     }
+    ul, p {
+    	padding: 0;
+    	list-style-type: none;
+    	font-weight: 100;
+    	font-size: .9rem;
+    }
+}
+
+iframe {
+	border: none;
+	padding: 0;
+	margin: 0;
+	height: 250px;
 }

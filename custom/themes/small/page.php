@@ -9,7 +9,7 @@
 ?>
 
 <!-- Banner with Title -->
-<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 400px; width: 100%; overflow: hidden;">
+<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
     <header>
         <hgroup>
             <h1 class="page-headline"><?php the_title(); ?><h1>
@@ -17,14 +17,11 @@
     </header>
 </section>
 
-<!-- Main Article and Aside -->
+<!-- Main Article -->
 <main>
     <article>
         <?php the_content(); ?>
     </article>
-    <aside>
-        <p>sidebar here</p>
-    </aside>
 </main>
 
 <?php endwhile; else : ?>

@@ -14,7 +14,6 @@ get_header();?>
         <hgroup>
             <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"><br>
             <p class="tagline">from natural to cultural resources | a network for small communities</p>
-            <!--<h1 class="page-headline"><?php the_title();?><h1>-->
         </hgroup>
     </header>
 </section>
@@ -22,7 +21,8 @@ get_header();?>
 <main>
     <div class="filters">
         <ul>
-            <li class="filter" data-filter="all"><a class="anchor" href="#">Show All</a></li>
+            <li>CULTURES OF:</li>
+            
             <li class="filter" data-filter=".culture-of-outports"><a class="anchor" href="#">Outports</a></li>
             <li class="filter" data-filter=".culture-of-fishing"><a class="anchor" href="#">Fishing</a></li>
             <li class="filter" data-filter=".culture-of-mining"><a class="anchor" href="#">Mining</a></li>
@@ -30,6 +30,7 @@ get_header();?>
             <li class="filter" data-filter=".culture-of-energy"><a class="anchor" href="#">Energy</a></li>
             <li class="filter" data-filter=".culture-of-farming"><a class="anchor" href="#">Farming</a></li>
             <li class="filter" data-filter=".culture-of-service"><a class="anchor" href="#">Service</a></li>
+            <li class="filter" data-filter="all"><a class="anchor" href="#">All</a></li>
             <!--
             <li class="sort" data-sort="default"><a class="anchor" href="#">Default</a></li>
             <li class="sort" data-sort="myorder:asc"><a class="anchor" href="#">Ascending</a></li>

@@ -15,9 +15,6 @@ section[role=slider] {
     }
 }
 
-
-
-
 .hero {
     height: 300px;
     width: 75%;
@@ -30,23 +27,16 @@ section[role=slider] {
     padding-top: 1em;
     @include outer-container;
     ul {
-        display: table;
-        width: 100%;
+        border-bottom: 1px solid red;
         list-style: none;
         padding: 0;
         li {
-            display: table-cell;
-            text-align: center;
-            border-right: 1px solid white;
-            background: #333;
-            padding: 1em;
-            &:hover {
-                background: #ccc;
-            }
+            display: inline;
+            padding: .5em;
         }
         a {
-            display: block;
-            color: white;
+            text-decoration: none;
+            color: #000;
         }
     }
 }

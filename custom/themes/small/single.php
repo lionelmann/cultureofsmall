@@ -9,10 +9,10 @@
 ?>
 
 <!-- Banner with Title -->
-<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 400px; width: 100%; overflow: hidden;">
+<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
     <header>
         <hgroup>
-            <h1 class="page-headline"><?php the_title(); ?><h1>
+            <h2 class="headline"><?php the_title(); ?><h2>
         </hgroup>
     </header>
 </section>
@@ -22,60 +22,25 @@
     <article>
         <?php the_content(); ?>
     </article>
-    <aside>
-        <?php 
-            $terms = wp_get_post_terms($post->ID, 'community');
-
-            if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-                echo '<ul>';
-                foreach ( $terms as $term ) {
-                    
-                    $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
-                    $description    = term_description($term->term_id, $term->taxonomy );
-                    $title          = $term->name;
-                    $slug           = $term->slug;
-                    $population     = $meta_data['_population'];
-                    $map            = $meta_data['_map'];
-                    //$income         = $meta_data['_income'];
-                    $distance       = $meta_data['_distance'];
-                    $income_select  = $meta_data['_income_select'];
-                    $city           = $meta_data['_city'];
-
-                    echo '<a href="' . get_term_link($term->term_id, $term->taxonomy) . '"><h6>' . $title . '</h6></a>';                   
-
-                    if($description):
-                        echo $description;
-                    endif;
-                    if($population):
-                        echo '<li>' . $population . ' people'. '</li>';
-                    endif;
-                    if($map):
-                        echo '<li>' . $map . '</li>';
-                    endif;
-                    if($income):
-                        echo '<li>' . $income . '</li>';
-                    endif;
-                    if($distance && $city):
-                        echo '<li>' . $distance . 'km' . ' to ' . $city . '</li>';
-                    endif;
-                    if($income_select != "none"):
-                        echo '<li>' . '$' . $income_select . '/per year' . '</li>';
-                    endif;
-                }
-                echo '</ul>';   
-
-            }
-        ?>
-        <p>This post is part of:</p>
-        <?php the_category();?>
-         <p>Most recent posts: </p>
-        <?php recentposts(); ?>
-        
-    </aside>
+    <?php get_sidebar(); ?>
 </main>
 
 <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 
+    <?php 
+        $terms = wp_get_post_terms($post->ID, 'community');
+        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+       
+            foreach ( $terms as $term ) {
+                $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
+                $map            = $meta_data['_map'];
+                if($map):    
+                 echo '<iframe src="http://maps.google.com/maps?z=9&t=m&q=loc:38.9419+-78.3020&output=embed" width="100%"></iframe>';
+                endif;
+            }
+       
+        }
+    ?>
 <?php get_footer();?>
