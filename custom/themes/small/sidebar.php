@@ -13,7 +13,7 @@
                 $population     = $meta_data['_population'];
                 $distance       = $meta_data['_distance'];
                 $income_select  = $meta_data['_income_select'];
-                $city           = stripslashes($meta_data['_city']);
+                $city           = $meta_data['_city'];
 
                 echo '<a href="' . get_term_link($term->term_id, $term->taxonomy) . '"><p>' . $title . '</p></a>';                   
                 if($population):

@@ -9,7 +9,7 @@
 ?>
 
 <!-- Banner with Title -->
-<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
+<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden; ">
     <header>
         <hgroup>
             <h2 class="headline"><?php the_title(); ?><h2>

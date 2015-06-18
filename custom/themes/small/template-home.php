@@ -51,7 +51,7 @@ $loop = new WP_Query($args); ?>
 
 <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-    <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "medium" ); ?>
+    <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(300, 400) ); ?>
 
     <?php $category_classes = ''; ?>
 
@@ -70,13 +70,17 @@ $loop = new WP_Query($args); ?>
         };
     }; 
     ?>
-    <a href="<?php the_permalink(); ?>">
-    <div class="mix<?php echo $category_classes; ?> desaturate" data-myorder="1" style="background-image: url(<?php echo $src[0]; ?>);">
-        <?php the_title(); ?>
-    </div>
-    </a>
+    <?php if($src) : ?>
+        <a href="<?php the_permalink(); ?>">
+            <div class="mix<?php echo $category_classes; ?>" data-myorder="1" style="background-image: url(<?php echo $src[0]; ?>);">
+                <div class="overlay">
+                <?php the_title(); ?>
+                </div>
+            </div>
+        </a>
+    <?php endif ?>
+        
 <?php endwhile; endif; ?>
-
 
 </div>  
 </main>
