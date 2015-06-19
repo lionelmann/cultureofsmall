@@ -74,12 +74,6 @@ $community->add_term_meta (
                 'description' => 'ex: <i>48.867442</i>. Go to <a href="https://support.google.com/maps/answer/18539?hl=en" target="_blank">Google support</a> for help finding coordinates', 
                 'type'        => 'text'
             ),
-            array(
-                'name'        => 'image',
-                'label'       => 'Community Image',
-                'description' => 'Community Image',
-                'type'        => 'image'
-            ),
         )
     );
 ?>

@@ -10,11 +10,17 @@
 		$image_src 	= wp_get_attachment_image_src($image_id, 'half-banner');
 ?>
 
-	<section role="slider" style="background-image: url(<?php echo $image_src[0]; ?>); height: 500px; width: 100%; overflow: hidden; ">
+	<section role="slider" style="background-image: url(<?php echo $image_src[0]; ?>); overflow: hidden;">
 	    <header>
 	        <hgroup>
+	        	<div style="width: 50%; float: left;">
 	            <h2 class="headline"><?php echo $title; ?></h2>
+	            </div>
+	            <div style="width: 50%; float:right; background-color: rgba(61,152,216, .7); color: white; padding: 4em;">
+	            <div style="margin-bottom: 20px;">
 	            <p><?php echo $content; ?></p>
+	            </div>
+	            </div>
 	        </hgroup>
 	    </header>
 	</section>
