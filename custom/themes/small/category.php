@@ -10,7 +10,7 @@
 		$image_src 	= wp_get_attachment_image_src($image_id, 'half-banner');
 ?>
 
-	<section role="slider" style="background-image: url(<?php echo $image_src[0]; ?>); overflow: hidden;">
+	<section role="hero" style="background-image: url(<?php echo $image_src[0]; ?>); overflow: hidden;">
 	    <header>
 	        <hgroup>
 	        	<div style="width: 50%; float: left;">

@@ -1,20 +1,28 @@
 section[role=slider] {
-    //@include display(flex);
-    //@include align-items(center);
-    //@include justify-content(center);
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
     //background-color: rgba(0, 0, 0, 0.2);
     background-size: cover;
     background-position: center center;
     height: 100vh;
-    //text-align: center;
-    //img {
-    //    width: 70%;
-    //    @include media($bp-large) {
-    //    width: 40%;
-    //}
-    //}
+    text-align: center;
+    img {
+        width: 70%;
+        @include media($bp-large) {
+        width: 40%;
+    }
+    }
 }
 
+section[role=hero] {
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+
+/*
 .hero {
     height: 300px;
     width: 75%;
@@ -22,7 +30,7 @@ section[role=slider] {
     @include align-items(center);
     @include justify-content(center);
 }
-
+*/
 .filters {
     padding: .9em;
     @include outer-container;
