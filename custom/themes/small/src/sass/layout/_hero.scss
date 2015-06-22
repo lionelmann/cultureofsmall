@@ -10,40 +10,43 @@ section[role=slider] {
     img {
         width: 70%;
         @include media($bp-large) {
-        width: 40%;
-    }
+            width: 40%;
+        }
     }
 }
 
 section[role=hero] {
-    background-size: cover;
-    background-position: center center;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
     height: 100vh;
+    overflow: scroll;
+
 }
 
-.bgvid {
-    position: fixed; 
-    right: 0; 
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto; 
-    z-index: -100;
+.hero-left {
+    width: 37.2%;
+    height: 100vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/*
-.hero {
-    height: 300px;
-    width: 75%;
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
+.hero-right {
+    width: 62.8%; 
+    float:right; 
+    background-color: rgba(61,152,216, .85); 
+    color: white; 
+    padding: 5em;
+    p:first-of-type {
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
 }
-*/
+
 .filters {
-    padding: .9em;
+    padding: .5em;
     @include outer-container;
     ul {
         border-bottom: 1px solid black;

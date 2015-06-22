@@ -21,15 +21,13 @@ get_header();?>
 <main>
     <div class="filters">
         <ul>
-            <li>CULTURES OF:</li>
-            
-            <li class="filter" data-filter=".culture-of-outports"><a class="anchor" href="#">Outports</a></li>
-            <li class="filter" data-filter=".culture-of-fishing"><a class="anchor" href="#">Fishing</a></li>
-            <li class="filter" data-filter=".culture-of-mining"><a class="anchor" href="#">Mining</a></li>
-            <li class="filter" data-filter=".culture-of-logging"><a class="anchor" href="#">Logging</a></li>
-            <li class="filter" data-filter=".culture-of-energy"><a class="anchor" href="#">Energy</a></li>
-            <li class="filter" data-filter=".culture-of-farming"><a class="anchor" href="#">Farming</a></li>
-            <li class="filter" data-filter=".culture-of-service"><a class="anchor" href="#">Service</a></li>
+            <li class="filter" data-filter=".culture-of-outports"><a class="anchor" href="#">Culture of Outports</a></li>
+            <li class="filter" data-filter=".culture-of-fishing"><a class="anchor" href="#">Culture of Fishing</a></li>
+            <li class="filter" data-filter=".culture-of-mining"><a class="anchor" href="#">Culture of Mining</a></li>
+            <li class="filter" data-filter=".culture-of-logging"><a class="anchor" href="#">Culture of Logging</a></li>
+            <li class="filter" data-filter=".culture-of-energy"><a class="anchor" href="#">Culture of Energy</a></li>
+            <li class="filter" data-filter=".culture-of-farming"><a class="anchor" href="#">Culture of Farming</a></li>
+            <li class="filter" data-filter=".culture-of-service"><a class="anchor" href="#">Culture of Service</a></li>
             <li class="filter" data-filter="all"><a class="anchor" href="#">All</a></li>
             <!--
             <li class="sort" data-sort="default"><a class="anchor" href="#">Default</a></li>
