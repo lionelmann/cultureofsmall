@@ -1,9 +1,11 @@
 footer {
-    background-color: $footer-background-color;
-    color: $footer-font-color;
+    //background-color: $footer-background-color;
+border-top: 1px dotted $footer-background-color;
+    color: $base-font-color;
     .inner {
         @include outer-container;
         @include pad(2em);
+
         .content {
             @include media($bp-large) {
                 @include span-columns(3.5);
@@ -19,6 +21,7 @@ footer {
 }
 
 #map {
+    border-top: 1px dotted $footer-background-color;
     height: 300px; 
     width: 100%;
 }

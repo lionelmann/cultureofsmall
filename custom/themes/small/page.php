@@ -12,14 +12,14 @@
 <section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
     <header>
         <hgroup>
-            <h1 class="page-headline"><?php the_title(); ?><h1>
+            <h1 class="headline"><?php the_title(); ?><h1>
         </hgroup>
     </header>
 </section>
 
 <!-- Main Article -->
 <main>
-    <article>
+    <article class="center">
         <?php the_content(); ?>
     </article>
 </main>

@@ -2,9 +2,9 @@ section[role=banner] {
     position: absolute;
     height: 80px;
     width: 100%;
-    
-    header {
-      //@include outer-container;
-      //@include pad(0 2em 0 2em);
+    img {
+    	width: 15%;
+    	float: left;
+    	padding: 1em;
     }
 }

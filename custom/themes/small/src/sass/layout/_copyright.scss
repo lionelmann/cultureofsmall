@@ -1,6 +1,6 @@
 .copyright {
-    background-color: $footer-background-color;
-    color: $footer-font-color;
+    //background-color: $footer-background-color;
+    color: $base-font-color;
     .inner {
         @include outer-container;
         @include pad(0 2em 2em 2em);

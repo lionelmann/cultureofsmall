@@ -13,10 +13,8 @@
 	<section role="hero" style="background-image:url(<?php echo $image_src[0]; ?>);">
 	    <header>
 	        <hgroup>
-	        	<div class="hero-left">
-	            <h3 class="headline"><?php echo $title; ?></h3>
-	            </div>
 	            <div class="hero-right">
+	            <h4 class="banner-headline"><?php echo $title; ?></h4>
 	            	<?php echo $content; ?>
 	            </div>
 	        </hgroup>

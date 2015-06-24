@@ -6,6 +6,9 @@ main {
 article {
 	@include media($bp-large) {
 		@include span-columns(6.5);
+        &.center {
+            @include shift(3);
+        }
     }
 }
 

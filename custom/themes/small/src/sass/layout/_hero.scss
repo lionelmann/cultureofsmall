@@ -24,6 +24,16 @@ section[role=hero] {
 
 }
 
+
+.home-hero {
+    @include outer-container;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    @include pad(8em 2em 0 2em);
+    height: 500px;
+}
+
 .hero-left {
     width: 37.2%;
     height: 100vh;
@@ -38,7 +48,7 @@ section[role=hero] {
     float:right; 
     background-color: rgba(61,152,216, .85); 
     color: white; 
-    padding: 5em;
+    padding: 1.2em 5em 5em 5em ;
     p:first-of-type {
         font-size: 1.3rem;
         font-weight: 100;
@@ -46,19 +56,29 @@ section[role=hero] {
 }
 
 .filters {
-    padding: .5em;
+    padding: .8em;
     @include outer-container;
     ul {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid lighten($base-accent-color, 30%);
+        border-top: 1px solid lighten($base-accent-color, 30%);
         list-style: none;
-        padding: 0;
+        padding: .4em 0 .5em 0;
         li {
             display: inline;
             margin: 0em 1em 4em 0em;
+
         }
         a {
+            font-size: .9rem;
             text-decoration: none;
-            color: #000;
+            color: lighten($base-font-color, 20%);
+            &:hover {
+                color: $base-accent-color;
+            }
+            &:focus {
+                color: $base-accent-color;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -69,7 +89,6 @@ section[role=hero] {
 
 
 .mix {
-
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -77,25 +96,30 @@ section[role=hero] {
     margin-bottom: 5%;
     text-align: center;
     @include media($bp-large) { 
+        vertical-align: top;
         width: 31%;
         margin-left: 1%;
         margin-right: 1%;
-        margin-bottom: 2%;
+        margin-bottom: 2.4%;
+        text-transform: uppercase;
     }
 }
 
 .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background:rgba(0,0,0,.4); 
     height: 100%;
     -webkit-transition: opacity .25s ease;
     -moz-transition: opacity .25s ease;
-    opacity: 1;
+    opacity: 1;    
     &:hover {
         opacity: 0;
     }
 }
 
-//.desaturate { -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+
 
 #container {
     a {
