@@ -40,12 +40,6 @@ get_header();?>
             <li class="filter" data-filter=".culture-of-farming"><a class="anchor" href="#">Farming</a></li>
             <li class="filter" data-filter=".culture-of-service"><a class="anchor" href="#">Service</a></li>
             <li class="filter" data-filter="all"><a class="anchor" href="#">Show all</a></li>
-            <li><i class="fa fa-sort"></i></li>
-            <li class="sort" data-sort="default"><a class="anchor" href="#">Default</a></li>
-            <li class="sort" data-sort="myorder:asc"><a class="anchor" href="#">Ascending</a></li>
-            <li class="sort" data-sort="myorder:desc"><a class="anchor" href="#">Descending</a></li>
-            <li class="sort" data-sort="random"><a class="anchor" href="#">Random</a></li>
-        
         </ul>
     </div>
 
