@@ -7,7 +7,7 @@ include('includes/wp-cuztom-helper/cuztom.php');
 include('includes/wp-cuztom-posts/custom-post-community.php');
 
 //Load custom functions
-//require_once('includes/functions/enqueue-style.php');
+require_once('includes/functions/enqueue-style.php');
 require_once('includes/functions/enqueue-script.php');
 require_once('includes/functions/image-support.php');
 require_once('includes/functions/page-excerpts.php');

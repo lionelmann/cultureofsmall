@@ -1,12 +1,16 @@
-section[role=slider] {
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
-    //background-color: rgba(0, 0, 0, 0.2);
-    background-size: cover;
-    background-position: center center;
+section[role=hero] {
+    background-size:cover;
+    background-position:center center;
     height: 100vh;
-    text-align: center;
+    &.scroll {
+        overflow: scroll;
+    }
+    &.center {
+        text-align: center;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+    }
     img {
         width: 70%;
         @include media($bp-large) {
@@ -15,116 +19,19 @@ section[role=slider] {
     }
 }
 
-section[role=hero] {
-    background-size:cover;
-    background-position:center center;
-    background-attachment:fixed;
-    height: 100vh;
-    overflow: scroll;
-
-}
-
-
-.home-hero {
+.home {
+    height: 500px;
     @include outer-container;
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
     @include pad(8em 2em 0 2em);
-    height: 500px;
 }
 
-.hero-left {
-    width: 37.2%;
-    height: 100vh;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-right {
-    width: 62.8%; 
-    float:right; 
+.category-hero {
     background-color: rgba(61,152,216, .85); 
-    color: white; 
-    padding: 1.2em 5em 5em 5em;
-    height: 100vh;
-    p:first-of-type {
-        font-size: 1.3rem;
-        font-weight: 100;
-    }
-
-}
-
-.filters {
-    padding: .8em;
-    @include outer-container;
-    ul {
-        border-bottom: 1px solid lighten($base-accent-color, 30%);
-        border-top: 1px solid lighten($base-accent-color, 30%);
-        list-style: none;
-        padding: .4em 0 .5em 0;
-        li {
-            display: inline;
-            margin: 0em 1em 4em 0em;
-
-        }
-        a {
-            font-size: .9rem;
-            text-decoration: none;
-            color: lighten($base-font-color, 20%);
-            &:hover {
-                color: $base-accent-color;
-            }
-            &:focus {
-                color: $base-accent-color;
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-#container .mix{
-    display: none;
-}
-
-
-.mix {
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 200px;
-    margin-bottom: 5%;
-    text-align: center;
-    @include media($bp-large) { 
-        vertical-align: top;
-        width: 31%;
-        margin-left: 1%;
-        margin-right: 1%;
-        margin-bottom: 2.4%;
-        text-transform: uppercase;
-    }
-}
-
-.overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:rgba(0,0,0,.4); 
-    height: 100%;
-    -webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;
-    opacity: 1;    
-    &:hover {
-        opacity: 0;
-    }
-}
-
-
-
-#container {
-    a {
-        color: #fff;
-    }
+    float:right; 
+    min-height: 100vh;
+    width: 62.8%; 
+    @include pad(1.2em 5em 5em 5em);
 }

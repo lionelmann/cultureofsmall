@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<section role="slider">
+<section role="hero" class="center">
 
     <img src='<?php bloginfo('template_url' ); ?>/dist/images/placeholder.png'>
     <div style="position: absolute; bottom: 50; left: 50%;"><a href="https://www.facebook.com/cultureofsmall"><i style="color: rgb(55, 151, 219);" class="fa fa-facebook-square fa-2x"></i></a>

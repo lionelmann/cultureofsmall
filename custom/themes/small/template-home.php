@@ -9,7 +9,7 @@ get_header();?>
     //$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "half-banner" );
 ?>
 
-<section class="home-hero">
+<section class="home">
     <header>
         <hgroup>
             <img src="<?php bloginfo('template_url' ); ?>/dist/images/small-logo.png"><br>

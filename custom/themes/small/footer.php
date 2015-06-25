@@ -27,7 +27,6 @@
 
 <?php wp_footer();?>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 

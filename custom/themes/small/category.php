@@ -10,10 +10,10 @@
 		$image_src 	= wp_get_attachment_image_src($image_id, 'half-banner');
 ?>
 
-	<section role="hero" style="background-image:url(<?php echo $image_src[0]; ?>);">
+	<section role="hero" class="scroll" style="background-image:url(<?php echo $image_src[0]; ?>);">
 	    <header>
 	        <hgroup>
-	            <div class="hero-right">
+	            <div class="category-hero">
 	            <h4 class="banner-headline"><?php echo $title; ?></h4>
 	            	<?php echo $content; ?>
 	            </div>
