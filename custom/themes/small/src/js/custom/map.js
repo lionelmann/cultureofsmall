@@ -11,7 +11,9 @@
 
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 zoomControl: false,
-                mapTypeControl:false,
+                mapTypeControl:true,
+                draggable:false,
+                scrollwheel: false,
 
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.

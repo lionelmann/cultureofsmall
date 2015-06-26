@@ -13,7 +13,7 @@
                 $population     = $meta_data['_population'];
                 $distance       = $meta_data['_distance'];
                 $income_select  = $meta_data['_income_select'];
-                $city           = $meta_data['_city'];
+                $city           = stripslashes($meta_data['_city']);
 
                 echo '<a href="' . get_term_link($term->term_id, $term->taxonomy) . '"><p>' . $title . '</p></a>';                   
                 if($population):
@@ -23,7 +23,7 @@
                     echo '<li>' . $income . '</li>';
                 endif;
                 if($distance && $city):
-                    echo '<li>' . $distance . 'km' . ' to ' . $city . '</li>';
+                    echo '<li>' . $distance . 'km' . ' to ' . stripslashes($city) . '</li>';
                 endif;
                 if($income_select != "none"):
                     echo '<li>' . '$' . $income_select . '/per year' . '</li>';

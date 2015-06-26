@@ -20,12 +20,9 @@ section[role=hero] {
 }
 
 .home {
-    height: 500px;
     @include outer-container;
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
     @include pad(8em 2em 0 2em);
+    height: 500px;
 }
 
 .category-hero {
