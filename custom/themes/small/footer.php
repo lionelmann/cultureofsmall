@@ -50,15 +50,14 @@
     });
 
 })(window.jQuery, window.jVette);
-</script>
 
-<script>
-    (function($){
-        $('#container').mixItUp();
-        $('.anchor').click(function(e) {
-            e.preventDefault();
-        });
-    })(jQuery);
+
+(function($){
+    $('#container').mixItUp();
+    $('.anchor').click(function(e) {
+        e.preventDefault();
+    });
+})(jQuery);
 </script>
 
 </body>
