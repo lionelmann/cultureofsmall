@@ -3,7 +3,7 @@
         $terms = wp_get_post_terms($post->ID, 'community');
 
         if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-            echo '<ul>';
+            echo '<ul class="meta">';
             foreach ( $terms as $term ) {
                     
                 $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
@@ -15,28 +15,27 @@
                 $income_select  = $meta_data['_income_select'];
                 $city           = stripslashes($meta_data['_city']);
 
-                echo '<a href="' . get_term_link($term->term_id, $term->taxonomy) . '"><p>' . $title . '</p></a>';                   
+                                  
                 if($population):
-                    echo '<li>' . $population . ' people'. '</li>';
-                endif;
-                if($income):
-                    echo '<li>' . $income . '</li>';
+                    echo '<li>' . '<span>' . $population . '</span>' . ' <br>people'. '</li>';
                 endif;
                 if($distance && $city):
-                    echo '<li>' . $distance . 'km' . ' to ' . stripslashes($city) . '</li>';
+                    echo '<li>' . '<span>' . $distance . '</span>' . '<br>' . stripslashes($city) . '</li>';
                 endif;
                 if($income_select != "none"):
-                    echo '<li>' . '$' . $income_select . '/per year' . '</li>';
+                    echo '<li>' . '<span>' . $income_select . '</span>' . '<br>Average salary' . '</li>';
                 endif;
             }
             echo '</ul>';
+
+            echo '<h5><a href="' . get_term_link($term->term_id, $term->taxonomy) . '">' . $title . '</a></h5>'; 
             if($description):
                 echo $description;
             endif;
         }
     ?>
-    <p>CULTURE</p>
+    <h6>CULTURE</h6>
     <?php the_category();?>
-    <p>RECENT ARTICLES: </p>
+    <h6>RECENT ARTICLES: </h6>
     <?php recentposts(); ?>
 </aside>

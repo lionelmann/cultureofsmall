@@ -8,18 +8,18 @@ get_header();?>
 <?php
     //$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "half-banner" );
 ?>
-
+<!--
 <section class="home">
     <header>
         <hgroup>
-            <img src="<?php bloginfo('template_url' ); ?>/dist/images/small-logo.png"><br>
+            <img src="<?php //bloginfo('template_url' ); ?>/dist/images/small-logo.png"><br>
             <p class="tagline">from natural to cultural resources &#149; a network for small communities</p>
         </hgroup>
     </header>
 </section>
-
+-->
 <!--
-<section role="slider" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
+<section role="slider" style="background-image: url(<?php //echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
     <header>
         <hgroup>
             <img src="<?php //bloginfo('template_url' ); ?>/dist/images/small-logo.png"><br>
@@ -28,6 +28,18 @@ get_header();?>
     </header>
 </section>
 -->
+
+<!-- Banner with Title -->
+<section role="hero" class="center test" style=" height: 500px;">
+    <header>
+        <hgroup>
+            <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"><br>
+            <p class="tagline">from natural to cultural resources | a network for small communities</p>
+            <a href="/" class="ghost">SHARE YOUR STORY</a>
+        </hgroup>
+    </header>
+</section>
+
 <main>
     <div class="filters" style="text-align: center;">
         <ul>
@@ -39,13 +51,13 @@ get_header();?>
             <li class="filter" data-filter=".culture-of-energy"><a class="anchor" href="#">Energy</a></li>
             <li class="filter" data-filter=".culture-of-farming"><a class="anchor" href="#">Farming</a></li>
             <li class="filter" data-filter=".culture-of-service"><a class="anchor" href="#">Service</a></li>
-            <li class="filter" data-filter="all"><a class="anchor" href="#">Show all</a></li>
+            <li class="filter" data-filter="all"><a class="anchor" href="#">All</a></li>
         </ul>
     </div>
 
 <?php $args = array(
     'post_type' => 'post',
-    'posts_per_page' => -1
+    'posts_per_page' => 9
 ); 
 
 $loop = new WP_Query($args); ?>
@@ -72,7 +84,7 @@ $loop = new WP_Query($args); ?>
         };
     }; 
     ?>
-    <?php if($src) : ?>
+    
         <a href="<?php the_permalink(); ?>">
             <div class="mix<?php echo $category_classes; ?>" data-myorder="<?php echo get_the_ID(); ?>" style="background-image: url(<?php echo $src[0]; ?>);">
                 <div class="overlay">
@@ -80,11 +92,14 @@ $loop = new WP_Query($args); ?>
                 </div>
             </div>
         </a>
-    <?php endif ?>
+    
         
 <?php endwhile; endif; ?>
 
 </div>  
+<div class="pager-list">
+    <!-- Pagination buttons will be generated here -->
+</div>
 </main>
 
 <?php get_footer();?>

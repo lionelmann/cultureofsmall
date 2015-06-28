@@ -1,6 +1,9 @@
 main {
 	@include outer-container;
 	@include pad(4em 2em 3em 2em);
+	.page-template-template-home & {
+		@include pad(0em 2em 3em 2em);
+	}
 }
 
 article {

@@ -18,7 +18,7 @@
 
     <section role="banner">
         <header>
-        <?php if(is_home): ?> <!--NEED TO CHANGE ONCE PAGE IS LIVE -->
+        <?php if(!is_page_template('template-home.php')): ?> <!--NEED TO CHANGE ONCE PAGE IS LIVE -->
             <a href="/"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"></a>
         <?php endif ?>
             <button class="btn" data-jv-trigger="right" /></button>

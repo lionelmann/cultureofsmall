@@ -3,4 +3,21 @@ aside {
 		@include shift(1.5);
 		@include span-columns(4);
     }
+    .meta {
+    	@include clearfix;
+    	margin-left: -20px;
+    	margin-top: -10px;
+    	li {
+    		display: inline;
+    		float: left;
+    		font-size: .8rem;
+    		text-align: center;
+    		width: 33%;
+    		span {
+    			font-size: 2.5rem;
+    			font-weight: 500;
+    			letter-spacing: -2px;
+    		}
+    	}
+    }
 }

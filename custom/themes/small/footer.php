@@ -11,9 +11,9 @@
         </div>
         <div class="content">
             <p>
-            <i class="fa fa-facebook-square fa-3x"></i>
-            <i class="fa fa-twitter-square fa-3x"></i>
-            <i class="fa fa-rss-square fa-3x"></i></p>
+            <i class="fa fa-facebook-square fa-2x"></i>
+            <i class="fa fa-twitter-square fa-2x"></i>
+            <i class="fa fa-rss-square fa-2x"></i></p>
         </div>
     </div>
 </footer>
@@ -31,6 +31,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
+
+
 ;(function($, jVette) {
 
     jVette && jVette({
