@@ -46,4 +46,10 @@
             }
         }
     ?>
+
+    <div style="height: 300px; background-color: #cccccc;">
+    <div style="text-align: center; padding-top: 130px;">
+        <?php dynamic_sidebar('cta'); ?>
+        </div>
+    </div>
 <?php get_footer();?>

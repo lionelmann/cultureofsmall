@@ -40,12 +40,19 @@ section[role=hero] {
 
 .ghost {
     border: 3px solid white;
-    color: white;
     padding: .5em;
     letter-spacing: 1.5px;
     border-radius: 2px;
+    a {
+        color: white;
+        text-transform: uppercase;
+        
+    }
     &:hover {
         background-color: white;
         color: $base-accent-color;
+        a {
+            color: $base-accent-color;
+        }
     }
 }

@@ -35,7 +35,7 @@ get_header();?>
         <hgroup>
             <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"><br>
             <p class="tagline">from natural to cultural resources | a network for small communities</p>
-            <a href="/" class="ghost">SHARE YOUR STORY</a>
+            <?php dynamic_sidebar('cta'); ?>
         </hgroup>
     </header>
 </section>
