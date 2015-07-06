@@ -1,13 +1,14 @@
 <footer>
     <div class="inner">
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porta elit a pharetra.</p>
+            <?php dynamic_sidebar('footer'); ?>
+
         </div>
         <div class="content">
-        <p>Submit your stories</p>
-        <form>
-            <input type="text" name="email" placeholder="Email">
-            </form>    
+        
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => false, 'items_wrap' => '<ul class="footer-menu">%3$s</ul>') ); ?>
+
+          
         </div>
         <div class="content">
             <p>
@@ -21,7 +22,7 @@
 <!-- Copyright-->
 <section class="copyright">
     <div class="inner">
-        <small>&#169; Copyright <?php echo date('Y')?> E.R.A. Architects Inc.</small>  
+        <small>&#169; Copyright <?php echo date('Y')?> Small</small>  
     </div>
 </section>
 

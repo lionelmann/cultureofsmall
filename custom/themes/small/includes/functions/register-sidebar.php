@@ -14,4 +14,14 @@ register_sidebar(array(
   	'after_title' => '</span>'
 ));
 
+register_sidebar(array(
+ 	'name' => __( 'Footer' ),
+ 	'id' => 'footer',
+ 	'description' => __( 'Widgets in this area will be shown in the footer.' ),
+  	'before_widget' => '',
+  	'after_widget' => '',
+  	'before_title' => '<span style="display: none;">',
+  	'after_title' => '</span>'
+));
+
 ?>
