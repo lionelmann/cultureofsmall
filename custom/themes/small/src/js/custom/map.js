@@ -11,7 +11,7 @@
 
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 zoomControl: false,
-                mapTypeControl:true,
+                mapTypeControl:false,
                 draggable:false,
                 scrollwheel: false,
 

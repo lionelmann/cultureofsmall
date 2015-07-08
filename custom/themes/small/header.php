@@ -21,7 +21,8 @@
         <?php if(!is_page_template('template-home.php')): ?> <!--NEED TO CHANGE ONCE PAGE IS LIVE -->
             <a href="/"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"></a>
         <?php endif ?>
-            <button class="btn" data-jv-trigger="right" /></button>
+            <a href="http://www.google.ca"><button class="btn search" /></button></a>
+            <button class="btn menu" data-jv-trigger="right" /></button>
             <nav data-jv-content="right">
                 <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
             </nav>

@@ -34,9 +34,7 @@ nav {
 }
 
 .btn {
-    float:right;
     font: normal normal normal 14px/1 FontAwesome;
-    margin: .6em;
     padding: .2em .3em .2em .29em;
     touch-action: manipulation;
     border: 1px solid transparent;
@@ -45,13 +43,30 @@ nav {
     color: #fff;
     background-color: rgba(0,0,0,.3);
     border-radius: 2px;
-    &:before {
-        content:"\f0c9";
+    &.menu {
+        float:right;
+        margin: .6em;
+        &:before {
+            content:"\f0c9";
+        }
+        &.jv-active:before {
+            content:"\f00d";
+        }
+        &:hover{
+            background-color: rgba(0,0,0,.5);
+        }
     }
-    &.jv-active:before {
-        content:"\f00d";
-    }
-    &:hover{
-        background-color: rgba(0,0,0,.5);
+    &.search {
+        position: absolute; 
+        right: 80px; 
+        top: 13px; 
+        margin: .2em;
+        &:before {
+            content:"\f002";
+        }
+        &:hover{
+            background-color: rgba(0,0,0,.5);
+        }
     }
 }
+

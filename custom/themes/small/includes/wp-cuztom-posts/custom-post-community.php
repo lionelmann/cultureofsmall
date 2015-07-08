@@ -42,14 +42,13 @@ $community->add_term_meta (
                 ),
                 'default_value' => 'none'
             ),
-            /*
+            
             array(
                 'name'        => 'income',
                 'label'       => 'Average income',
                 'description' => 'Average income',
                 'type'        => 'text'
             ),
-            */
             array(
                 'name'        => 'distance',
                 'label'       => 'Distance to nearest city',

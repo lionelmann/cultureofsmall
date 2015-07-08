@@ -12,18 +12,19 @@
                 $slug           = $term->slug;
                 $population     = $meta_data['_population'];
                 $distance       = $meta_data['_distance'];
-                $income_select  = $meta_data['_income_select'];
+                //$income_select  = $meta_data['_income_select'];
+                $average_income = $meta_data['_income'];
                 $city           = stripslashes($meta_data['_city']);
 
                                   
                 if($population):
-                    echo '<li>' . '<span>' . $population . '</span>' . ' <br>people'. '</li>';
+                    echo '<li>' . '<span>' . $population . '</span>' . ' <br>people live here'. '</li>';
                 endif;
                 if($distance && $city):
-                    echo '<li>' . '<span>' . $distance . '</span>' . '<br>' . stripslashes($city) . '</li>';
+                    echo '<li>' . '<span>' . $distance . '</span>' . '<br>' . 'kilometers from the city of '. stripslashes($city) . '</li>';
                 endif;
-                if($income_select != "none"):
-                    echo '<li>' . '<span>' . $income_select . '</span>' . '<br>Average salary' . '</li>';
+                if($average_income):
+                    echo '<li>' . '<span>' . $average_income . '</span>' . '<br>Average yearly salary' . '</li>';
                 endif;
             }
             echo '</ul>';
@@ -36,6 +37,4 @@
     ?>
     <h6>CULTURE</h6>
     <?php the_category();?>
-    <h6>RECENT ARTICLES: </h6>
-    <?php recentposts(); ?>
 </aside>
