@@ -43,7 +43,6 @@ get_header();?>
 <main>
     <div class="filters" style="text-align: center;">
         <ul>
-            <li style="text-transform: uppercase; font-weight: bold;">Culture of: </li>
             <li class="filter" data-filter=".culture-of-outports"><a class="anchor" href="#">Outports</a></li>
             <li class="filter" data-filter=".culture-of-fishing"><a class="anchor" href="#">Fishing</a></li>
             <li class="filter" data-filter=".culture-of-mining"><a class="anchor" href="#">Mining</a></li>
@@ -57,7 +56,7 @@ get_header();?>
 
 <?php $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 9
+    'posts_per_page' => 6
 ); 
 
 $loop = new WP_Query($args); ?>

@@ -21,10 +21,17 @@
         <?php if(!is_page_template('template-home.php')): ?> <!--NEED TO CHANGE ONCE PAGE IS LIVE -->
             <a href="/"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"></a>
         <?php endif ?>
-            <a href="http://www.google.ca"><button class="btn search" /></button></a>
+            <!--<a href="http://www.google.ca"><button class="btn search" /></button></a>-->
             <button class="btn menu" data-jv-trigger="right" /></button>
             <nav data-jv-content="right">
                 <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
             </nav>
         </header>
     </section>
+
+<input type="checkbox" name="toggle" id="toggle" />
+<label for="toggle" class="btn"></label>
+<div class="container">
+</div>  
+<div class="message"><h1>Search</h2>
+</div>
