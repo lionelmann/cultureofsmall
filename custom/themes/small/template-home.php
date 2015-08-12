@@ -58,10 +58,12 @@ $loop = new WP_Query($args); ?>
             };
         }; 
         ?>
-        
+
         <a href="<?php the_permalink(); ?>">
             <div class="mix<?php echo $category_classes; ?>" data-myorder="<?php echo get_the_ID(); ?>" style="background-image: url(<?php echo $src[0]; ?>);">
+            <div class="header">
                 <span><?php the_title(); ?></span>
+                </div>
             </div>
         </a>
           
