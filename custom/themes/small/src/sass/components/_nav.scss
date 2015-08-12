@@ -44,25 +44,15 @@ nav {
     background-color: rgba(0,0,0,.3);
     border-radius: 2px;
     &.menu {
-        float:right;
+        position: absolute;
+        right: 0;
+        top: 10px;
         margin: .6em;
         &:before {
             content:"\f0c9";
         }
         &.jv-active:before {
             content:"\f00d";
-        }
-        &:hover{
-            background-color: rgba(0,0,0,.5);
-        }
-    }
-    &.search {
-        position: absolute; 
-        right: 80px; 
-        top: 13px; 
-        margin: .2em;
-        &:before {
-            content:"\f002";
         }
         &:hover{
             background-color: rgba(0,0,0,.5);

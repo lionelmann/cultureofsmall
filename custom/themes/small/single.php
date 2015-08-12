@@ -9,7 +9,7 @@
 ?>
 
 <!-- Banner with Title -->
-<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden; ">
+<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>);">
     <header>
         <hgroup>
             <h1 class="headline"><?php the_title(); ?><h1>
@@ -47,9 +47,4 @@
         }
     ?>
 
-    <div style="height: 300px; background-color: #cccccc;">
-    <div style="text-align: center; padding-top: 130px;">
-        <?php dynamic_sidebar('cta'); ?>
-        </div>
-    </div>
 <?php get_footer();?>

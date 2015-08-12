@@ -63,7 +63,7 @@ p {
         font-size: modular-scale(0, 1.25rem); 
         line-height: modular-scale(2, 1.12rem);
     }
-    .multi-columns & {
+    .category-content-inner  & {
         color: white; 
         margin: 0;
         font-size: modular-scale(0); 
@@ -122,7 +122,13 @@ blockquote {
     padding-left: $base-line-height / 2;
 }
 
+hr {
+    border-width: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
 .tagline {
+    opacity: 0.7;
     font-size: modular-scale(0);
     @include media($bp-large) {
         font-size: modular-scale(1); 
@@ -137,8 +143,8 @@ blockquote {
     letter-spacing: 10px;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
     @include media($bp-large) {
-        font-size: modular-scale(5);
-        line-height: modular-scale(6);
+        font-size: modular-scale(5, 1.2rem);
+        line-height: modular-scale(6, 1.2rem);
     }
 }
 

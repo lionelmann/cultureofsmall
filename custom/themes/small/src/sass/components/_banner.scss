@@ -1,0 +1,12 @@
+section[role=banner] {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    header {
+    	text-align: center;
+    }
+    img {
+    	max-width: 250px;
+    	@include pad(2em 0 0 0);
+    }
+}

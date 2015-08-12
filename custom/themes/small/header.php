@@ -16,22 +16,40 @@
 
     <?php //include_once("analyticstracking.php") ?>
 
+    <!-- Banner with Title -->
     <section role="banner">
         <header>
-        <?php if(!is_page_template('template-home.php')): ?> <!--NEED TO CHANGE ONCE PAGE IS LIVE -->
-            <a href="/"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"></a>
-        <?php endif ?>
-            <!--<a href="http://www.google.ca"><button class="btn search" /></button></a>-->
-            <button class="btn menu" data-jv-trigger="right" /></button>
+            <?php if(is_page_template('template-home.php')) : ?>
+                <div class="cta">
+                    <a href="">Submit a Story</a>
+                </div>
+                <a href="/home"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-small-bw.png" class=" animated fadeInDown"></a>
+                <div class="cta">
+                    <a href="">Find out More</a>
+                </div>
+                <p class="tagline">from natural to cultural resources | a network for small communities</p>
+                <hr>
+            <?php else : ?>
+                <div class="cta cta__reverse">
+                    <a href="">Submit a Story</a>
+                </div>
+                <a href="/home"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png" class=" animated fadeInDown"></a>
+                <div class="cta cta__reverse">
+                    <a href="">Find out More</a>
+                </div>
+            <?php endif; ?>
+                <?php //dynamic_sidebar('cta'); ?>
+        </header>
+
+        <button class="btn menu" data-jv-trigger="right" /></button>
             <nav data-jv-content="right">
                 <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
             </nav>
-        </header>
     </section>
 
-<input type="checkbox" name="toggle" id="toggle" />
-<label for="toggle" class="btn"></label>
-<div class="container">
-</div>  
-<div class="message"><h1>Search</h2>
-</div>
+    <input type="checkbox" name="toggle" id="toggle" />
+    <label for="toggle" class="btn"></label>
+    <div class="container"></div>  
+    <div class="message">
+        <h1>Search</h2>
+    </div>

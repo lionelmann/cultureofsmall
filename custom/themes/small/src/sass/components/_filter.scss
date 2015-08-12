@@ -1,6 +1,9 @@
 .filters {
-    padding: 2em 0 0 0;
-    @include outer-container;
+    margin-top: 200px;
+    height: 80px;
+    padding: .2em 0 0 0;
+    //@include outer-container;
+    text-align: center;
     ul {
         list-style: none;
         padding: 0;

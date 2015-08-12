@@ -10,21 +10,20 @@
 		$src 	= wp_get_attachment_image_src($image_id, 'half-banner');
 ?>
 
-	<section role="hero" class="center" style="background-image:url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
+	<!-- Banner with Title -->
+	<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>);">
 	    <header>
 	        <hgroup>
-	            <h4 class="headline"><?php echo $title; ?></h4>
+	            <h1 class="headline"><?php echo $title; ?><h1>
 	        </hgroup>
 	    </header>
 	</section>
 
-	<div class="multi-columns">
-		<div class="inner">
-		<div class="category-hero">
+	<section class="category-content">
+		<div class="category-content-inner">
 			<?php echo $content; ?>
 		</div>
-		</div>
-	</div>
+	</section>
 
 <?php } ?>
 
@@ -56,12 +55,12 @@ endif; ?>
 		?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="mix" style="background-image: url(<?php echo $src[0]; ?>);">
-				<div class="overlay">
-					<?php the_title(); ?>
-				</div>
-		    </div>
-		</a>
+            <div class="mix" style="background-image: url(<?php echo $src[0]; ?>);">
+            <div class="header">
+                <span><?php the_title(); ?></span>
+                </div>
+            </div>
+        </a>
 
 		<?php endwhile; else : ?>
 		    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

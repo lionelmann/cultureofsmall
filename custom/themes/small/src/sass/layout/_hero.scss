@@ -1,28 +1,15 @@
 section[role=hero] {
     background-size:cover;
     background-position:center center;
-    height: 100vh;
-    &.scroll {
-        overflow: scroll;
-    }
+    height: 650px;
+    width: 100%; 
+    overflow: hidden; 
     &.center {
         text-align: center;
         @include display(flex);
         @include align-items(center);
         @include justify-content(center);
     }
-    img {
-        width: 70%;
-        @include media($bp-large) {
-            width: 50%;
-        }
-    }
-}
-
-.home {
-    @include outer-container;
-    text-align: center;
-    @include pad(2em 0 0 0);
 }
 
 .ghost {

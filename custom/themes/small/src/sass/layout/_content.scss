@@ -1,9 +1,6 @@
 main {
 	@include outer-container;
-	@include pad(4em 2em 3em 2em);
-	.page-template-template-home & {
-		@include pad(0em 2em 3em 2em);
-	}
+	@include pad(2em);
 }
 
 article {
@@ -15,15 +12,13 @@ article {
     }
 }
 
-.multi-columns {
+.category-content {
 	background-color: rgba(61,152,216, .85);
-	&.inner {
-		@include span-columns(12);
-	}
 }
 
-.category-hero {
-    @include columns(2 20em);
+.category-content-inner {
+	@include outer-container();
+	@include columns(2 20em);
     @include column-rule(1px dotted #ddd);
     @include column-gap(4em);
     @include pad(3em 2em 3em 2em);

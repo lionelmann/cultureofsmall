@@ -9,7 +9,7 @@
 ?>
 
 <!-- Banner with Title -->
-<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
+<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>);">
     <header>
         <hgroup>
             <h1 class="headline"><?php the_title(); ?><h1>

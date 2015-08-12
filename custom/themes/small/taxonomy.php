@@ -32,12 +32,12 @@
 		?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="mix" style="background-image: url(<?php echo $src[0]; ?>);">
-				
-					<?php the_title(); ?>
-				
-		    </div>
-		</a>
+            <div class="mix" style="background-image: url(<?php echo $src[0]; ?>);">
+            <div class="header">
+                <span><?php the_title(); ?></span>
+                </div>
+            </div>
+        </a>
 
 		<?php endwhile; else : ?>
 		    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

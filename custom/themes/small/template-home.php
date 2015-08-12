@@ -4,19 +4,9 @@
  */
 get_header();?>
 
-<!-- Banner with Title -->
-<section style="height: 200px; border-bottom: 1px solid #ccc;">
-    <div class="home">
-    <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-small-bw.png" style="width: 250px;"><br>
-        <p class="tagline">from natural to cultural resources | a network for small communities</p>
-        <?php //dynamic_sidebar('cta'); ?>
-    </div>
-</section>
-
-
 <!-- Filter Menu -->
 <main>
-    <div class="filters" style="text-align: center;">
+    <div class="filters">
         <ul>
             <li class="filter" data-filter=".culture-of-outports"><a class="anchor" href="#">Outports</a></li>
             <li class="filter" data-filter=".culture-of-fishing"><a class="anchor" href="#">Fishing</a></li>
