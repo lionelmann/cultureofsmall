@@ -29,12 +29,12 @@
             }
             echo '</ul>';
 
-            echo '<h5><a href="' . get_term_link($term->term_id, $term->taxonomy) . '">' . $title . '</a></h5>'; 
+            echo '<h4><a href="' . get_term_link($term->term_id, $term->taxonomy) . '">' . $title . '</a></h4>'; 
             if($description):
                 echo $description;
             endif;
         }
     ?>
-    <h6>CULTURE</h6>
+    <h4>CULTURE</h4>
     <?php the_category();?>
 </aside>

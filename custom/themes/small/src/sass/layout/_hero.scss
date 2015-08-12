@@ -21,14 +21,12 @@ section[role=hero] {
 
 .home {
     @include outer-container;
-    @include pad(8em 2em 0 2em);
-    height: 500px;
+  
+    text-align: center;
+    @include pad(2em 0 0 0);
+
 }
 
-.test {
-    background-color: $base-accent-color;
-    height: 500px;
-}
 
 .category-hero {
     background-color: rgba(61,152,216, .85); 

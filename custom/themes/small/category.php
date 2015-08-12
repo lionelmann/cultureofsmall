@@ -39,7 +39,7 @@
 	getPage(131);
 endif; ?>
 
-<main>
+
 	<div id="container">
 
 		<!-- Loop starts -->
@@ -62,6 +62,6 @@ endif; ?>
 		    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
 	</div>
-</main>
+
 
 <?php get_footer();?>

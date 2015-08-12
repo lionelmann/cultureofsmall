@@ -4,42 +4,17 @@
  */
 get_header();?>
 
- <!-- Get post thumbnail url -->
-<?php
-    //$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "half-banner" );
-?>
-<!--
-<section class="home">
-    <header>
-        <hgroup>
-            <img src="<?php //bloginfo('template_url' ); ?>/dist/images/small-logo.png"><br>
-            <p class="tagline">from natural to cultural resources &#149; a network for small communities</p>
-        </hgroup>
-    </header>
-</section>
--->
-<!--
-<section role="slider" style="background-image: url(<?php //echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
-    <header>
-        <hgroup>
-            <img src="<?php //bloginfo('template_url' ); ?>/dist/images/small-logo.png"><br>
-            <p class="tagline">from natural to cultural resources | a network for small communities</p>
-        </hgroup>
-    </header>
-</section>
--->
-
 <!-- Banner with Title -->
-<section role="hero" class="center test" style=" height: 500px;">
-    <header>
-        <hgroup>
-            <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png"><br>
-            <p class="tagline">from natural to cultural resources | a network for small communities</p>
-            <?php dynamic_sidebar('cta'); ?>
-        </hgroup>
-    </header>
+<section style="height: 200px; border-bottom: 1px solid #ccc;">
+    <div class="home">
+    <img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-small-bw.png" style="width: 250px;"><br>
+        <p class="tagline">from natural to cultural resources | a network for small communities</p>
+        <?php //dynamic_sidebar('cta'); ?>
+    </div>
 </section>
 
+
+<!-- Filter Menu -->
 <main>
     <div class="filters" style="text-align: center;">
         <ul>
@@ -53,52 +28,43 @@ get_header();?>
             <li class="filter" data-filter="all"><a class="anchor" href="#">All</a></li>
         </ul>
     </div>
+</main>
 
+<!-- Filter Images -->
 <?php $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 6
+    'posts_per_page' => 9
 ); 
 
 $loop = new WP_Query($args); ?>
 
 <div id="container">
+    <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(400, 500) ); ?>
 
-<?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <?php $category_classes = ''; ?>
 
-    <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(300, 400) ); ?>
+        <?php $categories = get_the_terms($post->ID , 'category'); 
+            $terms = wp_get_post_terms($post->ID, 'community'); 
+        ?>
 
-    <?php $category_classes = ''; ?>
-
-    <?php $categories = get_the_terms($post->ID , 'category'); 
-        $terms = wp_get_post_terms($post->ID, 'community'); 
-    ?>
-
-    <?php if($categories){
-        foreach($categories as $category){
-            $category_classes .= ' '.$category->slug;
-        };
-        foreach ( $terms as $term ) {
-            $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
-            $description    = term_description($term->term_id, $term->taxonomy );
-        };
-    }; 
-    ?>
-    
+        <?php if($categories){
+            foreach($categories as $category){
+                $category_classes .= ' '.$category->slug;
+            };
+            foreach ( $terms as $term ) {
+                $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
+                $description    = term_description($term->term_id, $term->taxonomy );
+            };
+        }; 
+        ?>
+        
         <a href="<?php the_permalink(); ?>">
             <div class="mix<?php echo $category_classes; ?>" data-myorder="<?php echo get_the_ID(); ?>" style="background-image: url(<?php echo $src[0]; ?>);">
-                <div class="overlay">
                 <span><?php the_title(); ?></span>
-                </div>
             </div>
         </a>
-    
-        
-<?php endwhile; endif; ?>
-
+          
+    <?php endwhile; endif; ?>
 </div>  
-<div class="pager-list">
-    <!-- Pagination buttons will be generated here -->
-</div>
-</main>
-
 <?php get_footer();?>

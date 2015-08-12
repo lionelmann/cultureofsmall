@@ -2,98 +2,93 @@ body {
     background-color: #fff; 
     color: $base-font-color;
     font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $unitless-line-height;
+    line-height: $base-line-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: $header-font-color;
     font-family: $header-font-family;
-    -webkit-font-smoothing: antialiased;
-    line-height: $header-line-height;
-    margin-bottom: 1em;
 }
 
 h1 { 
     font-size: modular-scale(3);
+    line-height: modular-scale(4);
     @include media($bp-large) {
-        font-size: modular-scale(6);
+        font-size: modular-scale(3);
+        line-height: modular-scale(4);
     }
 }
 
 h2 { 
     font-size: modular-scale(2);
+    line-height: modular-scale(3);
     @include media($bp-large) {
-        font-size: modular-scale(5); 
-        margin-bottom: 0em;
+        font-size: modular-scale(2);
+        line-height: modular-scale(3);
     } 
 }
 
 h3 { 
-    font-size: modular-scale(2); 
+    font-size: modular-scale(1);
+    line-height: modular-scale(2);
     @include media($bp-large) {
-        font-size: modular-scale(4); 
+        font-size: modular-scale(1); 
+        line-height: modular-scale(2);
     }
 }
 
 h4 { 
-    font-size: modular-scale(1); 
+    font-size: modular-scale(0);
+    line-height: modular-scale(1);
     @include media($bp-large) {
-        font-size: modular-scale(3);
+        font-size: modular-scale(0);
+        line-height: modular-scale(1);
     }
 }
 
-h5 { 
-    font-size: modular-scale(2); 
+p {
+    font-size: modular-scale(-1, 1.2rem); 
+    line-height: modular-scale(1, 1.2rem);
+    padding-bottom: modular-scale(1);
     @include media($bp-large) {
-        font-size: modular-scale(2);
+        font-size: modular-scale(0, 1.25rem); 
+        line-height: modular-scale(2, 1.12rem);
     }
 }
 
-h6 { 
-    font-size: modular-scale(1);
-    color: $base-font-color;
-}
-
-.headline {
-    color: #fff;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-}
-
-.banner-headline {
-    color: #fff;
-}
-
-.single article p:first-of-type {
-    font-size: 1.3rem;
-    font-weight: 100;
-}
-
-p, ul, ol {
-    font-size: $base-font-size;
-    list-style-type: disc;
-    margin-top: 0;
-    margin-bottom: 1.5em;
+ul, ol {
+    font-size: modular-scale(-1, 1.2rem); 
+    line-height: modular-scale(1, 1.2rem);
+    padding-bottom: modular-scale(1);
+    @include media($bp-large) {
+        font-size: modular-scale(0, 1.25rem); 
+        line-height: modular-scale(2, 1.12rem);
+    }
     aside & {
         font-weight: 100;
-        font-size: .9rem;
+        font-size: modular-scale(-1);
         list-style-type: none;
         padding: 0;
+        @include media($bp-large) {
+            font-size: modular-scale(0);
+        }
+    }
+    .filter {
+        font-family: $sans-serif;
+        a:hover {
+            border-bottom: 3px solid black;
+            color: black;
+            padding-bottom: 3px;
+        }
+    }
+    nav & {
+        font-family: $sans-serif;
+        font-size: modular-scale(0); 
+        font-weight: 100;
     }
 }
 
-a {
-    color: $base-link-color;
-    text-decoration: none;
-    @include transition(color 0.1s linear);
-    &:hover {
-        color: $hover-link-color;
-    }
-    &:active {
-        color: $hover-link-color;
-        outline: none;
-    }
-}
+
 
 hr {
     border-bottom: 1px solid $base-border-color;
@@ -111,15 +106,45 @@ blockquote {
 }
 
 .tagline {
-    //color: $base-accent-color;
-    color: $light-font-color;
-    font-size: .9rem;
-    text-align: center;
-    margin-bottom: 3em;
+    font-size: modular-scale(0);
     @include media($bp-large) {
-        font-size: 1.2rem;
+        font-size: modular-scale(1); 
     }
 }
+
+.headline {
+    color: $light-font-color;
+    font-size: modular-scale(3);
+    line-height: modular-scale(4);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    -webkit-font-smoothing: antialiased;
+    @include media($bp-large) {
+        font-size: modular-scale(5);
+        line-height: modular-scale(6);
+    }
+}
+
+.single article p:first-of-type {
+    font-size: modular-scale(2);
+    font-weight: 100;
+    line-height: modular-scale(3);
+}
+
+a {
+    color: $base-link-color;
+    text-decoration: none;
+    @include transition(color 0.1s linear);
+    &:hover {
+        color: $hover-link-color;
+    }
+    &:active {
+        color: $hover-link-color;
+        outline: none;
+    }
+}
+
 
 .category-hero {
     p:first-of-type {
@@ -132,6 +157,7 @@ blockquote {
 
     }
 }
+
 
 .footer-menu {
     padding: 0;

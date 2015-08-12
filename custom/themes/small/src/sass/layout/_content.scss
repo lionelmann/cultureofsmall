@@ -8,9 +8,9 @@ main {
 
 article {
 	@include media($bp-large) {
-		@include span-columns(6.5);
+		@include span-columns(7);
         &.center {
-            @include shift(3);
+            @include shift(2.5);
         }
     }
 }
