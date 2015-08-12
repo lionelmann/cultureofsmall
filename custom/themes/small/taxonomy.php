@@ -21,8 +21,6 @@
     ?>
 
 
-
-<main>
 	<div id="container">
 
 		<!-- Loop starts -->
@@ -35,9 +33,9 @@
 
 		<a href="<?php the_permalink(); ?>">
 			<div class="mix" style="background-image: url(<?php echo $src[0]; ?>);">
-				<div class="overlay">
+				
 					<?php the_title(); ?>
-				</div>
+				
 		    </div>
 		</a>
 
@@ -45,6 +43,5 @@
 		    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
 	</div>
-</main>
 
 <?php get_footer();?>

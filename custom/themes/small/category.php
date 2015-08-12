@@ -7,21 +7,26 @@
 		$title 		= $page->post_title;
 		$content 	= wpautop($page->post_content);
 		$image_id 	= get_post_thumbnail_id($page_id);
-		$image_src 	= wp_get_attachment_image_src($image_id, 'half-banner');
+		$src 	= wp_get_attachment_image_src($image_id, 'half-banner');
 ?>
 
-	<section role="hero" class="scroll" style="background-image:url(<?php echo $image_src[0]; ?>);">
+	<section role="hero" class="center" style="background-image:url(<?php echo $src[0]; ?>); height: 500px; width: 100%; overflow: hidden;">
 	    <header>
 	        <hgroup>
-	            <div class="category-hero">
-	            <h4 class="banner-headline"><?php echo $title; ?></h4>
-	            	<?php echo $content; ?>
-	            </div>
+	            <h4 class="headline"><?php echo $title; ?></h4>
 	        </hgroup>
 	    </header>
 	</section>
-<?php } ?>
 
+	<div class="multi-columns">
+		<div class="inner">
+		<div class="category-hero">
+			<?php echo $content; ?>
+		</div>
+		</div>
+	</div>
+
+<?php } ?>
 
 <?php if (is_category('Culture of Energy')) :
 	getPage(133);

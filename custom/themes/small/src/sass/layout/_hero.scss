@@ -21,19 +21,8 @@ section[role=hero] {
 
 .home {
     @include outer-container;
-  
     text-align: center;
     @include pad(2em 0 0 0);
-
-}
-
-
-.category-hero {
-    background-color: rgba(61,152,216, .85); 
-    float:right; 
-    min-height: 100vh;
-    width: 62.8%; 
-    @include pad(1.2em 5em 5em 5em);
 }
 
 .ghost {
