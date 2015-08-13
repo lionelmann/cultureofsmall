@@ -28,23 +28,23 @@
 <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-    <?php
-        $terms = wp_get_post_terms($post->ID, 'community');
-        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-       
-            foreach ( $terms as $term ) {
-                $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
-                $lat            = $meta_data['_map_lat'];
-                $lng            = $meta_data['_map_lng'];
-                if($lat && $lng):
-                    echo '<script>';
-                    echo 'var lat = ' . $lat . '; ';
-                    echo 'var lng = ' . $lng . ';';
-                    echo '</script>';
-                    echo '<div id="map"></div>';
-                endif;
-            }
+
+<?php
+    $terms = wp_get_post_terms($post->ID, 'community');
+    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+        foreach ( $terms as $term ) {
+            $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
+            $lat            = $meta_data['_map_lat'];
+            $lng            = $meta_data['_map_lng'];
+            if($lat && $lng):
+                echo '<script>';
+                echo 'var lat = ' . $lat . '; ';
+                echo 'var lng = ' . $lng . ';';
+                echo '</script>';
+                echo '<div id="map"></div>';
+            endif;
         }
-    ?>
+    }
+?>
 
 <?php get_footer();?>

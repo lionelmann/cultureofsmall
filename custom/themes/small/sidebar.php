@@ -12,16 +12,14 @@
                 $slug           = $term->slug;
                 $population     = $meta_data['_population'];
                 $distance       = $meta_data['_distance'];
-                //$income_select  = $meta_data['_income_select'];
                 $average_income = $meta_data['_income'];
                 $city           = stripslashes($meta_data['_city']);
-
-                                  
+                    
                 if($population):
                     echo '<li>' . '<span>' . $population . '</span>' . ' <br>people live here'. '</li>';
                 endif;
                 if($distance && $city):
-                    echo '<li>' . '<span>' . $distance . '</span>' . '<br>' . 'kilometers from the city of '. stripslashes($city) . '</li>';
+                    echo '<li>' . '<span>' . $distance . '</span>' . '<br>' . 'km from '. stripslashes($city) . '</li>';
                 endif;
                 if($average_income):
                     echo '<li>' . '<span>' . $average_income . '</span>' . '<br>Average yearly salary' . '</li>';

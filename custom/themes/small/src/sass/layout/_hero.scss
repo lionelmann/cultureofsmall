@@ -3,30 +3,25 @@ section[role=hero] {
     background-position:center center;
     height: 650px;
     width: 100%; 
-    overflow: hidden; 
+    overflow: hidden;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 650px;
+        background-color: rgba(0,0,0,.3);
+        z-index: 0;
+    }
+    header {
+        position: relative;
+        z-index: 1;
+    }
     &.center {
         text-align: center;
         @include display(flex);
         @include align-items(center);
         @include justify-content(center);
-    }
-}
-
-.ghost {
-    border: 3px solid white;
-    padding: .5em;
-    letter-spacing: 1.5px;
-    border-radius: 2px;
-    a {
-        color: white;
-        text-transform: uppercase;
-        
-    }
-    &:hover {
-        background-color: white;
-        color: $base-accent-color;
-        a {
-            color: $base-accent-color;
-        }
     }
 }

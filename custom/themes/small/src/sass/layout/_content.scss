@@ -11,15 +11,3 @@ article {
         }
     }
 }
-
-.category-content {
-	background-color: rgba(61,152,216, .85);
-}
-
-.category-content-inner {
-	@include outer-container();
-	@include columns(2 20em);
-    @include column-rule(1px dotted #ddd);
-    @include column-gap(4em);
-    @include pad(3em 2em 3em 2em);
-}

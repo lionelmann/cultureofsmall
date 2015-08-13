@@ -2,6 +2,10 @@ aside {
 	@include media($bp-large) {
 		@include shift(1);
 		@include span-columns(4);
+        margin-top: 1.8em;
+        p {
+            font-size: .9rem;
+        }
     }
     .meta {
     	@include clearfix;
@@ -13,11 +17,14 @@ aside {
     		font-size: .8rem;
     		text-align: center;
     		width: 33%;
+            line-height: 1.3rem;
             padding: 1%;
     		span {
     			font-size: 2.5rem;
     			font-weight: 500;
     			letter-spacing: -2px;
+                font-family: $sans-serif;
+
     		}
     	}
     }
