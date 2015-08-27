@@ -5,17 +5,17 @@
 get_header();?>
 
 <!-- Filter Menu -->
+
 <main>
     <div class="filters">
         <ul>
-            <li class="filter" data-filter=".culture-of-outports"><a class="anchor" href="#">Outports</a></li>
-            <li class="filter" data-filter=".culture-of-fishing"><a class="anchor" href="#">Fishing</a></li>
-            <li class="filter" data-filter=".culture-of-mining"><a class="anchor" href="#">Mining</a></li>
-            <li class="filter" data-filter=".culture-of-logging"><a class="anchor" href="#">Logging</a></li>
-            <li class="filter" data-filter=".culture-of-energy"><a class="anchor" href="#">Energy</a></li>
-            <li class="filter" data-filter=".culture-of-farming"><a class="anchor" href="#">Farming</a></li>
-            <li class="filter" data-filter=".culture-of-service"><a class="anchor" href="#">Service</a></li>
-            <li class="filter" data-filter="all"><a class="anchor" href="#">All</a></li>
+            <li class="filter"><a href="/category/culture-of-outports/">Outports</a></li>
+            <li class="filter"><a href="/category/culture-of-fishing/">Fishing</a></li>
+            <li class="filter"><a href="/category/culture-of-mining/">Mining</a></li>
+            <li class="filter"><a href="/category/culture-of-logging/">Logging</a></li>
+            <li class="filter"><a href="/category/culture-of-energy/">Energy</a></li>
+            <li class="filter"><a href="/category/culture-of-farming/">Farming</a></li>
+            <li class="filter"><a href="/category/culture-of-service/">Service</a></li>
         </ul>
     </div>
 </main>
