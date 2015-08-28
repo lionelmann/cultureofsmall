@@ -1,6 +1,8 @@
+@include font-face("JamesPaul", "dist/fonts/2F01D6_0_0", $file-formats: eot ttf woff2 woff);
+
 $serif: 'Source Serif Pro', serif;
 $sans-serif: 'Montserrat', sans-serif;
-$cursive: 'Pacifico';
+$cursive: 'JamesPaul';
 
 $base-font-family: $serif;
 $header-font-family: $sans-serif;

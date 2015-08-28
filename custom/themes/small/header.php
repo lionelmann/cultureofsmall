@@ -27,8 +27,7 @@
                 <div class="cta">
                     <a href="">Find out More</a>
                 </div>
-                <p class="tagline">from natural to cultural resources | a network for small communities</p>
-                <hr>
+                <p class="tagline">from natural to cultural resources<br>a network for small communities</p>
             <?php else : ?>
                 <div class="cta cta__reverse">
                     <a href="">Submit a Story</a>
