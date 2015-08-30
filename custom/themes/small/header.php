@@ -25,12 +25,12 @@
                 </div>
                 <a href="/home"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-small-bw.png" class=" animated fadeInDown"></a>
                 <div class="cta">
-                    <a href="">Find out More</a>
+                    <a href="/about-us/">Find out More</a>
                 </div>
                 <p class="tagline">from natural to cultural resources<br>a network for small communities</p>
             <?php else : ?>
                 <div class="cta cta__reverse">
-                    <a href="">Submit a Story</a>
+                    <a href="/submit-a-story/">Submit a Story</a>
                 </div>
                 <a href="/home"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-cultureofsmall.png" class=" animated fadeInDown"></a>
                 <div class="cta cta__reverse">

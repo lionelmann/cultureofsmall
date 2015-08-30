@@ -1,4 +1,4 @@
-.filters {
+.nav-home {
     margin-top: 200px;
     height: 80px;
     padding: .2em 0 0 0;
@@ -26,10 +26,6 @@
     }
 }
 
-#container .mix{
-    display: none;
-}
-
 .mix {
     background-size: cover;
     background-position: center center;
@@ -47,6 +43,7 @@
 
 #container {
     font-size: 0;
+    width: 100%;
 
     a {
         color: #fff;
@@ -57,7 +54,8 @@
     position: relative;
         z-index: 1;
         top: 50%;
-        transform: translateY(-50%);
+        
+        @include transform(translateY(-50%));
         font-size: 2rem;
         text-align: center;
         font-family: $sans-serif;

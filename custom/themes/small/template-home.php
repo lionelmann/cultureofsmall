@@ -7,7 +7,7 @@ get_header();?>
 <!-- Filter Menu -->
 
 <main>
-    <div class="filters">
+    <div class="nav-home">
         <ul>
             <li class="filter"><a href="/category/culture-of-outports/">Outports</a></li>
             <li class="filter"><a href="/category/culture-of-fishing/">Fishing</a></li>
@@ -50,7 +50,7 @@ $loop = new WP_Query($args); ?>
         ?>
 
         <a href="<?php the_permalink(); ?>">
-            <div class="mix <?php echo $category_classes; ?>" data-myorder="<?php echo get_the_ID(); ?>" style="background-image: url(<?php echo $src[0]; ?>);">
+            <div class="mix <?php //echo $category_classes; ?>" data-myorder="<?php //echo get_the_ID(); ?>" style="background-image: url(<?php echo $src[0]; ?>);">
                 <div class="header">
                     <span><?php the_title(); ?></span>
                 </div>

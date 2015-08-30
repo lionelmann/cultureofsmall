@@ -1,10 +1,8 @@
 footer {
-    border-top: 1px dotted $footer-background-color;
     color: $base-font-color;
     .inner {
         @include outer-container;
         @include pad(2em);
-
         .content {
             @include media($bp-large) {
                 &:nth-of-type(1) {
