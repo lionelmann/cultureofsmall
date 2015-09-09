@@ -4,8 +4,6 @@
  */
 get_header();?>
 
-<!-- Filter Menu -->
-
 <main>
     <div class="nav-home">
         <ul>
@@ -20,44 +18,31 @@ get_header();?>
     </div>
 </main>
 
-<!-- Filter Images -->
-<?php $args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 9
+<?php 
+    $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 9,
+        'paged' =>  $paged,
 ); 
 
-$loop = new WP_Query($args); ?>
+$the_query = new WP_Query( $args ); ?>
 
 <div id="container">
-    <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(400, 500) ); ?>
-
-        <?php $category_classes = ''; ?>
-
-        <?php $categories = get_the_terms($post->ID , 'category'); 
-            $terms = wp_get_post_terms($post->ID, 'community'); 
-        ?>
-
-        <?php if($categories){
-            foreach($categories as $category){
-                $category_classes .= ' '.$category->slug;
-            };
-            foreach ( $terms as $term ) {
-                $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
-                $description    = term_description($term->term_id, $term->taxonomy );
-            };
-        }; 
-        ?>
+    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
+     
+        $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(400, 500) ); ?>
 
         <a href="<?php the_permalink(); ?>">
-            <div class="mix <?php //echo $category_classes; ?>" data-myorder="<?php //echo get_the_ID(); ?>" style="background-image: url(<?php echo $src[0]; ?>);">
+            <div class="mix" style="background-image: url(<?php echo $src[0]; ?>);">
                 <div class="header">
                     <span><?php the_title(); ?></span>
                 </div>
             </div>
         </a>
-          
     <?php endwhile; endif; ?>
 </div>
+
+<?php pagination(); ?>
  
 <?php get_footer();?>
