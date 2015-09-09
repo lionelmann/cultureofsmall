@@ -1,0 +1,13 @@
+
+.searchform {
+
+	@include outer-container();
+	input[type=text] {
+		border: none;
+    	width: 100%;
+    	margin-top: 5px;
+    	height: 25px;
+    	color: black;
+   	}
+	
+}

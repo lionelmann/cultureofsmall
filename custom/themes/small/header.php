@@ -50,6 +50,5 @@
     <label for="toggle" class="btn"></label>
     <div class="container"></div>  
     <div class="message">
-        <h1>Search</h2>
         <?php get_search_form() ?>
     </div>

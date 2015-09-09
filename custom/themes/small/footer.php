@@ -17,20 +17,6 @@
     </div>
 </footer>
 
-<script>
-  (function() {
-    var cx = '011462022890732872651:qy50o7mjgyk';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
-
 <!-- Copyright-->
 <section class="copyright">
     <div class="inner">
@@ -39,10 +25,7 @@
 </section>
 
 <?php wp_footer();?>
-<!--
-<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
--->
+
 <script>
 
 
@@ -65,15 +48,6 @@
     });
 
 })(window.jQuery, window.jVette);
-
-/*
-(function($){
-    $('#container').mixItUp();
-    $('.anchor').click(function(e) {
-        e.preventDefault();
-    });
-})(jQuery);
-*/
 
 </script>
 

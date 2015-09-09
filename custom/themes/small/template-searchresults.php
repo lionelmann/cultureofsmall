@@ -11,10 +11,10 @@
 <?php get_header() ?>
 
 <main>
-  <article>
+  
   <script>
     (function() {
-      var cx = '012883476298758501389:gdx0drwv2wo';
+      var cx = '011462022890732872651:qy50o7mjgyk';
       var gcse = document.createElement('script');
       gcse.type = 'text/javascript';
       gcse.async = true;
@@ -25,7 +25,7 @@
     })();
   </script>
   <gcse:searchresults-only noResultsString="Sorry, we coudn't find any posts containing &#8216;<?php echo$_REQUEST["q"]; ?>&#8217;."</gcse:searchresults-only>
-  </article>
+  
 </main>
 
 <?php get_footer() ?>
