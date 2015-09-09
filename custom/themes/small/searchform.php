@@ -1,15 +1,18 @@
 
-
-
-<form class="searchform" action='<?php bloginfo('url'); ?>/search-results' class="search">
-    <label for="cx" class="visuallyHidden" ><?php _e('Search','small theme');?></label>
-    <input name='cx' type='hidden' value='011462022890732872651:qy50o7mjgyk'/>
-    <input id="cx" type='text' name='q' value="Search" onClick="(this.value='')"  class="search-text search-input" />
-    <input name='ie' type='hidden' value='ISO-8859-1'/>
-    <input class="submit" type="submit" name="sa" value="Search" />
-    <input type="hidden" name="cof" value="FORID:10" />
+<form id="searchform" action="<?php bloginfo('url'); ?>/search-results">
+  <input id="q" style="width:600px;" name="q" size="75" type="text"/>
+  <input class="submit" type="submit" name="sa" value="Search" />
 </form>
-
+<!--
+<form class="searchform" action='<?php bloginfo('url'); ?>/search-results' class="search">
+    <input id="cx" type='text' name='q' value="Search" onClick="(this.value='')"  class="search-text search-input" />
+    <input name='cx' type='hidden' value='011462022890732872651:qy50o7mjgyk'/>
+    
+    
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input class="submit" type="submit" name="sa" value="Search" />
+</form>
+-->
 
 <!--
 <div class="top-search">

@@ -1,6 +1,5 @@
 
-.searchform {
-
+#searchform {
 	@include outer-container();
 	input[type=text] {
 		border: none;
