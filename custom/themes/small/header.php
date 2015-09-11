@@ -19,7 +19,7 @@
     <!-- Banner with Title -->
     <section role="banner">
         <header>
-            <?php if(is_page_template('template-home.php')) : ?>
+            <?php if(is_page_template('template-home.php') || is_tax( 'community' )) : ?>
                 <div class="cta">
                     <a href="/submit-a-story">Submit a Story</a>
                 </div>

@@ -3,7 +3,7 @@
         $terms = wp_get_post_terms($post->ID, 'community');
 
         if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-            echo '<ul class="meta">';
+            echo '<ul class="meta animated fadeIn">';
             foreach ( $terms as $term ) {
                     
                 $meta_data      = get_cuztom_term_meta($term->term_id, $term->taxonomy);
@@ -27,12 +27,13 @@
             }
             echo '</ul>';
 
-            echo '<h4><a href="' . get_term_link($term->term_id, $term->taxonomy) . '">' . $title . '</a></h4>'; 
+            echo '<h3><a href="' . get_term_link($term->term_id, $term->taxonomy) . '">' . $title . '</a></h3>'; 
+            echo '<span style="margin-top: -20px; display: block; font-size: .9rem;">';
+            the_category(', ');
+            echo '</span>';
             if($description):
                 echo $description;
             endif;
         }
     ?>
-    <h4>CULTURE</h4>
-    <?php the_category();?>
 </aside>

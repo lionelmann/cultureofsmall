@@ -14,7 +14,7 @@
                     echo 'var lat = ' . $lat . '; ';
                     echo 'var lng = ' . $lng . ';';
                     echo '</script>';
-                    echo '<div id="map" style="height: 500px; z-index: -200;"></div>';
+                    echo '<div id="map" style="height: 650px; z-index: -200;"></div>';
                 endif;
             }
         }
