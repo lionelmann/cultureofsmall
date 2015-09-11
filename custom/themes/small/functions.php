@@ -17,6 +17,7 @@ require_once('includes/functions/register-menu.php');
 require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/remove-header-meta.php');
 require_once('includes/functions/remove-menu-id.php');
+require_once('includes/functions/remove-image-dimensions.php');
 //require_once('includes/functions/remove-wp-version.php');
 //require_once('includes/shortcodes/button.php');
 require_once('includes/functions/custom-cta-widget.php');
