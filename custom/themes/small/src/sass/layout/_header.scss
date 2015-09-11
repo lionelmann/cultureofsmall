@@ -1,7 +1,6 @@
 
 .message {
-	background:#181818;
-	color:#FFF;
+	background: $nav-background-color;
 	position: absolute;
 	top: -250px;
 	left: 0;
@@ -11,6 +10,8 @@
 	transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 	overflow: hidden;
 	box-sizing: border-box;
+	font-family: $sans-serif;
+	z-index:1;
 }
 
 #toggle {
@@ -23,11 +24,15 @@
 
 #toggle + label {
 	position:absolute;
-	right: 85px;
-	margin-top: 29px;
+	right: 70px;
+	margin-top: 26px;
   	cursor:pointer;
   	transition:all 500ms ease;
   	z-index:1;
+  	@include media($bp-large) {
+		right: 85px;
+		margin-top: 29px;
+  	}
 }
 
 #toggle + label:after {

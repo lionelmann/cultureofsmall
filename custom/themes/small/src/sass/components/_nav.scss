@@ -39,10 +39,13 @@ nav {
     touch-action: manipulation;
     border: 1px solid transparent;
     white-space: nowrap;
-    font-size: 200%;
+    font-size: 160%;
     color: #fff;
     background-color: rgba(0,0,0,.3);
     border-radius: 2px;
+    @include media($bp-large) {
+    font-size: 200%;
+    }
     &.menu {
         position: absolute;
         right: 0;

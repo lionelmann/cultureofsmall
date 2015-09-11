@@ -87,6 +87,7 @@ ul, ol {
     font-size: modular-scale(-1, 1.2rem); 
     line-height: modular-scale(1, 1.2rem);
     padding-bottom: modular-scale(1);
+    padding-left: 0;
     @include media($bp-large) {
         font-size: modular-scale(0, 1.25rem); 
         line-height: modular-scale(2, 1.12rem);
@@ -103,8 +104,7 @@ ul, ol {
     .filter {
         font-family: $sans-serif;
         a:hover {
-            border-bottom: 3px solid black;
-            color: black;
+            border-bottom: 3px solid $base-accent-color;
             padding-bottom: 3px;
         }
     }
@@ -129,10 +129,7 @@ hr {
 
 .tagline {
     font-family: $cursive;
-    font-size: modular-scale(0);
-    @include media($bp-large) {
-        font-size: modular-scale(1, 1.1rem); 
-    }
+    font-size: modular-scale(1, 1.1rem);
 }
 
 .headline {
@@ -173,4 +170,5 @@ a {
 
 footer p {
     font-size: modular-scale(0, 1rem); 
+
 }

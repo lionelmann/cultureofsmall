@@ -4,10 +4,24 @@ section[role=banner] {
     width: 100%;
     z-index: 1;
     header {
-    	text-align: center;
+        text-align: left;
+        @include media($bp-large) {
+    	   text-align: center;
+        }
+        & .tagline {
+            text-align: center;
+            @include pad(0em .4em 0 .4em);
+            @include media($bp-large) {
+                @include pad(.5em 0 0 0);
+            }
+        }
     }
     img {
-    	max-width: 270px;
-    	@include pad(1.7em 0 0 0);
+        max-width: 150px;
+        @include pad(1.7em 0 0 1em);
+        @include media($bp-large) {
+    	   max-width: 270px;
+    	   @include pad(1.7em 0 0 0);
+        }
     }
 }

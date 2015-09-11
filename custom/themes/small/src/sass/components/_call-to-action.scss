@@ -1,17 +1,26 @@
 .cta {
-	height: 50px; 
-	display: inline-block; 
-	vertical-align: top; 
-	margin-top: 35px; 
-	padding: 2rem;
-	font-family: $sans-serif;
-	text-transform: uppercase;
-	a {
-		color: black;
-		padding-bottom: 5px;
-		padding-top: 5px;
-		border-top: 3px solid black;
-		border-bottom: 3px solid black;
+	display: none;
+	@include media($bp-large) {
+		height: 50px; 
+		display: inline-block; 
+		vertical-align: top; 
+		margin-top: 35px; 
+		padding: 2rem;
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		a {
+			color: black;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			border-top: 3px solid black;
+			border-bottom: 3px solid black;
+			&:hover {
+				border-bottom: 3px solid $base-accent-color;
+				border-top: 3px solid $base-accent-color;
+				color: $base-accent-color;
+			}
+		}
+
 	}
 }
 
@@ -20,5 +29,10 @@
 		color: white;
 		border-top: 3px solid white;
 		border-bottom: 3px solid white;
+		&:hover {
+			border-bottom: 3px solid $cta-hover-link-color;
+			border-top: 3px solid $cta-hover-link-color;
+			color: $cta-hover-link-color;
+		}
 	}
 }

@@ -2,11 +2,16 @@
 #searchform {
 	@include outer-container();
 	input[type=text] {
+		background-color: $nav-background-color;
 		border: none;
+		border-bottom: 1px solid $light-font-color;
+		color: $light-font-color;
+		font-size: 3rem;
+		margin-top: 60px;
     	width: 100%;
-    	margin-top: 5px;
-    	height: 25px;
-    	color: black;
    	}
-	
+   	input[type=text]:focus, textarea:focus {
+  		border-bottom: 1px solid $light-font-color;
+  		outline: 0;
+	}
 }

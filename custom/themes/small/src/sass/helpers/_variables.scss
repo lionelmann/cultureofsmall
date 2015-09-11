@@ -42,6 +42,7 @@ $icon-font-color: $blue;
 // Link Colors
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
+$cta-hover-link-color: darken($light-font-color, 25);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 $footer-hover-color: darken($footer-font-color, 30);
