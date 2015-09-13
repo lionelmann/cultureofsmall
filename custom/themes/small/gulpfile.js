@@ -38,7 +38,7 @@ gulp.task('imagemin', function () {
             use: [pngquant()]
         }))
         .pipe(gulp.dest(outputDir + '/images'))
-        .pipe(notify("image task finished"));
+        //.pipe(notify("image task finished"));
 });
 
 // Create js scripts concat and minify task.
@@ -50,7 +50,7 @@ gulp.task('js', function() {
     	.pipe(uglify('app.min.js', {outSourceMap: true}))
     	.pipe(gulp.dest(outputDir + '/js'))
     	.pipe(livereload())
-    	.pipe(notify("js task finished"));
+    	//.pipe(notify("js task finished"));
 });
 
 
@@ -60,7 +60,7 @@ gulp.task('sass', function() {
     .on('error', function (err) { console.error('Error!', err.message); })
     .pipe(gulp.dest(''))
     .pipe(livereload())
-    .pipe(notify("sass task finished"));
+    //.pipe(notify("sass task finished"));
 }); 
 
 // Create fonticons compile task

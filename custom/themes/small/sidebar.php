@@ -16,13 +16,13 @@
                 $city           = stripslashes($meta_data['_city']);
                     
                 if($population):
-                    echo '<li>' . '<span>' . $population . '</span>' . ' <br>people live here'. '</li>';
+                    echo '<li>' . '<span class="number">' . $population . '</span>' . ' <br><span class="text">people live here</span>'. '</li>';
                 endif;
                 if($distance && $city):
-                    echo '<li>' . '<span>' . $distance . '</span>' . '<br>' . 'km from '. stripslashes($city) . '</li>';
+                    echo '<li>' . '<span class="number">' . $distance . '</span>' . '<br><span class="text">' . 'km from '. stripslashes($city) . '</span></li>';
                 endif;
                 if($average_income):
-                    echo '<li>' . '<span>' . $average_income . '</span>' . '<br>Average yearly salary' . '</li>';
+                    echo '<li>' . '<span class="number">' . $average_income . '</span>' . '<br><span class="text">Average yearly salary</span>' . '</li>';
                 endif;
             }
             echo '</ul>';
