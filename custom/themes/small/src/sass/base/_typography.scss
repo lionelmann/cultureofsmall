@@ -87,7 +87,7 @@ aside {
         display: inline;
         float: left;
         width: 33%;
-        text-align: center;
+        text-align: left;
         padding: 1%;
         .number {
             font-family: $sans-serif;
@@ -181,16 +181,16 @@ a {
 }
 
 .footer-menu {
-    padding-top: 1em;
-        margin: 0;
+    padding-top: .5em;
+    margin: 0;
     li {
         list-style-type: none;
         font-size: modular-scale(0, 1rem); 
+        line-height: modular-scale(1, 1.2rem);
     }
-    
 }
 
 footer p {
     font-size: modular-scale(0, 1rem); 
-
+    line-height: modular-scale(1, 1.1rem);
 }

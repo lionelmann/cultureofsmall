@@ -14,7 +14,7 @@
 	<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>);">
 	    <header>
 	        <hgroup>
-	            <h1 class="headline"><?php echo $title; ?><h1>
+	            <h1 class="headline animated fadeInUp"><?php echo $title; ?><h1>
 	        </hgroup>
 	    </header>
 	</section>

@@ -23,14 +23,11 @@
         <small>&#169; Copyright <?php echo date('Y')?> Small</small>  
     </div>
 </section>
-
+<?php echo $population; ?>
 <?php wp_footer();?>
 
 <script>
-
-
 ;(function($, jVette) {
-
     jVette && jVette({
         slide: { 
             duration: 350, 
@@ -48,7 +45,6 @@
     });
 
 })(window.jQuery, window.jVette);
-
 </script>
 
 </body>

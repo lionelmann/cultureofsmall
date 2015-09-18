@@ -21,3 +21,25 @@ require_once('includes/functions/remove-image-dimensions.php');
 //require_once('includes/functions/remove-wp-version.php');
 //require_once('includes/shortcodes/button.php');
 require_once('includes/functions/custom-cta-widget.php');
+
+function crunchify_social_sharing_buttons($content) {
+	if(is_single() || is_home()){
+		$shortURL = get_permalink();
+		$shortTitle = get_the_title();
+		$twitterURL = 'https://twitter.com/intent/tweet?text='.$shortTitle.'&amp;url='.$shortURL.'&amp;via=cultureofsmall';
+		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$shortURL;
+		$googleURL = 'https://plus.google.com/share?url='.$shortURL;
+		//$bufferURL = 'https://bufferapp.com/add?url='.$shortURL.'&amp;text='.$shortTitle;
+	
+		$variable = '<div class="crunchify-social"><span class="share-text">Share</span>';
+		$variable .= '<a class="crunchify-link crunchify-twitter" href="'. $twitterURL .'" target="_blank"><i class="fa fa-twitter"></i></a>';
+		$variable .= '<a class="crunchify-link crunchify-facebook" href="'.$facebookURL.'" target="_blank"><i class="fa fa-facebook"></i></a>';
+		$variable .= '<a class="crunchify-link crunchify-googleplus" href="'.$googleURL.'" target="_blank"><i class="fa fa-google-plus"></i></a>';
+		//$variable .= '<a class="crunchify-link crunchify-buffer" href="'.$bufferURL.'" target="_blank">Buffer</a>';
+		$variable .= '<a class="crunchify-link follow-twit" href="http://twitter.com/cultureofsmall" target="_blank">Follow @cultureofsmall</a></div>';
+		return $variable.$content;
+	}else{
+		return $variable.$content;
+	}
+};
+add_filter( 'the_content', 'crunchify_social_sharing_buttons');

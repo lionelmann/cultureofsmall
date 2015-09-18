@@ -16,7 +16,8 @@ var scriptList = [
 	'src/components/modernizer/modernizr.js',
 	'src/components/jquery/dist/jquery.js',
     'src/js/custom/jvette.js',
-    'src/js/custom/map.js'
+    'src/js/custom/map.js',
+    'src/js/custom/countUp.js'
 ];
 
 var fontIcons = [
