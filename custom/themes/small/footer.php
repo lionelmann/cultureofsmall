@@ -19,8 +19,9 @@
 
 <!-- Copyright-->
 <section class="copyright">
-    <div class="inner">
-        <small>&#169; Copyright <?php echo date('Y')?> Small</small>  
+    <div class="inner">  
+        <small><i class="fa fa-envelope"></i> <a href="mailto:info@cultureofsmall.com">info@cultureofsmall.com</a></small>
+        <small>&#169; Copyright <?php echo date('Y')?> Small</small>
     </div>
 </section>
 <?php echo $population; ?>

@@ -20,7 +20,7 @@ require_once('includes/functions/remove-menu-id.php');
 require_once('includes/functions/remove-image-dimensions.php');
 //require_once('includes/functions/remove-wp-version.php');
 //require_once('includes/shortcodes/button.php');
-require_once('includes/functions/custom-cta-widget.php');
+//require_once('includes/functions/custom-cta-widget.php');
 
 function crunchify_social_sharing_buttons($content) {
 	if(is_single() || is_home()){

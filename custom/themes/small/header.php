@@ -37,7 +37,6 @@
                     <a href="/about-us">Find out More</a>
                 </div>
             <?php endif; ?>
-                <?php //dynamic_sidebar('cta'); ?>
         </header>
 
         <button class="btn menu" data-jv-trigger="right" /></button>

@@ -2,7 +2,7 @@ footer {
     color: $base-font-color;
     .inner {
         @include outer-container;
-        @include pad(2em);
+        @include pad(2em 2em 1em 2em);
         .content {
             @include media($bp-large) {
                 &:nth-of-type(1) {
@@ -25,9 +25,10 @@ footer {
 
 .copyright {
     color: $base-font-color;
+    background-color: #F6FBFC;
     .inner {
         @include outer-container;
-        @include pad(0 2em 2em 2em);
+        @include pad(2em 2em 2em 2em);
     }
     @include media($bp-large) {
         small {
@@ -41,7 +42,6 @@ footer {
         }
     }
     a {
-        color: $footer-font-color;
         &:hover {
             opacity: 0.6;
         }
