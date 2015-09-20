@@ -36,7 +36,7 @@ function crunchify_social_sharing_buttons($content) {
 		$variable .= '<a class="crunchify-link crunchify-facebook" href="'.$facebookURL.'" target="_blank"><i class="fa fa-facebook"></i></a>';
 		$variable .= '<a class="crunchify-link crunchify-googleplus" href="'.$googleURL.'" target="_blank"><i class="fa fa-google-plus"></i></a>';
 		//$variable .= '<a class="crunchify-link crunchify-buffer" href="'.$bufferURL.'" target="_blank">Buffer</a>';
-		$variable .= '<a class="crunchify-link follow-twit" href="http://twitter.com/cultureofsmall" target="_blank">Follow @cultureofsmall</a></div>';
+		//$variable .= '<a class="crunchify-link follow-twit" href="http://twitter.com/cultureofsmall" target="_blank">Follow @cultureofsmall</a></div>';
 		return $variable.$content;
 	}else{
 		return $variable.$content;
