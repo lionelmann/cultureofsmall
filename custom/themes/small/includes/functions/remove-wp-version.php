@@ -3,7 +3,7 @@
 * Remove wp version param from any enqueued scripts
 */
 function at_remove_wp_ver_css_js( $src ) {
-    if ( strpos( $src, '?ver=' ) )
+    if ( strpos( $src, '?ver=' ) || strpos($src, 'ver=') )
         $src = remove_query_arg( 'ver', $src );
     return $src;
 }
