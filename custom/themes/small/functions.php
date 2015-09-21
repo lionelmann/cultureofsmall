@@ -67,3 +67,10 @@ function disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
+
+add_filter('style_loader_tag', 'add_defer_attribute', 10, 2);
+function add_defer_attribute($tag, $handle) {
+    if ('style' !== $handle )
+        return $tag;
+    return str_replace( ' href', ' async="async" href', $tag );
+}
