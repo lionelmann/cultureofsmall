@@ -21,7 +21,7 @@
 <section class="copyright">
     <div class="inner">  
         <small><i class="fa fa-envelope"></i> <a href="mailto:info@cultureofsmall.com">info@cultureofsmall.com</a></small>
-        <small>&#169; Copyright <?php echo date('Y')?> Small</small>
+        <small>&#169; Copyright <?php echo date('Y')?> Culture of Small &#8226; <a href="<?php bloginfo( 'url' ); ?>/terms-of-use/">Terms of use</a> &#8226; <a href="<?php bloginfo( 'url' ); ?>/privacy-policy/">Privacy</a></small>
     </div>
 </section>
 <?php echo $population; ?>
