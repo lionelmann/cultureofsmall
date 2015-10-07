@@ -1,3 +1,23 @@
+.header-nav {
+	background-color: rgba(61,152,216, .85);
+	height: 70px;
+	font-family: $sans-serif;
+	color: white;
+
+	ul {
+		float: right;
+		margin: 0px;
+		padding: 1rem;
+		list-style: none;
+		li {
+			display: inline-block;
+			font-size: 1rem;
+			padding-left: 1rem;
+		}
+
+	}
+}
+
 
 .message {
 	background: $nav-background-color;

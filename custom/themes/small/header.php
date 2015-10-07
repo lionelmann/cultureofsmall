@@ -15,6 +15,21 @@
 <body <?php body_class(); ?>>
 
     <?php //include_once("analyticstracking.php") ?>
+    <?php if(!is_page_template('template-home.php')): ?>
+        <section class="header-nav">
+        <ul>
+        <li>Mining</li>
+        <li>Fishing</li>
+        <li>Farming</li>
+        <li>Energy</li>
+        <li>Logging</li>
+        <li>Outports</li>
+        <li>Service</li>
+        <li>Investor</li>
+        </ul>
+       
+        </section>
+    <?php endif; ?>
 
     <!-- Banner with Title -->
     <section role="banner">
