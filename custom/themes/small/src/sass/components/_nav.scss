@@ -7,6 +7,16 @@
     display: none;
 }
 
+.header-nav {
+    ul a {
+        color: white;
+    }
+}
+
+.mobile {
+    display: none;
+}
+
 nav {
     position: absolute;
     z-index: -10000;

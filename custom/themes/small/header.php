@@ -14,24 +14,24 @@
 
 <body <?php body_class(); ?>>
 
-    <?php //include_once("analyticstracking.php") ?>
-    <?php if(!is_page_template('template-home.php')): ?>
-        <section class="header-nav">
-        <ul>
-        <li>Mining</li>
-        <li>Fishing</li>
-        <li>Farming</li>
-        <li>Energy</li>
-        <li>Logging</li>
-        <li>Outports</li>
-        <li>Service</li>
-        <li>Investor</li>
-        </ul>
-       
-        </section>
-    <?php endif; ?>
+<?php //include_once("analyticstracking.php") ?>
+<?php if(!is_page_template('template-home.php')): ?>
+    <section class="header-nav">
+        <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
+        
+        <button class="btn menu mobile" data-jv-trigger="right" /></button>
+        <nav data-jv-content="right">
+            <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
+        </nav>
+        <input type="checkbox" name="toggle" id="toggle" />
+        <label for="toggle" class="btn mobile"></label>
+        <div class="container"></div>  
+        <div class="message">
+            <?php get_search_form() ?>
+        </div>
+    </section>
+<?php endif; ?>
 
-    <!-- Banner with Title -->
     <section role="banner">
         <header>
             <?php if(is_page_template('template-home.php') || is_tax( 'community' )) : ?>
@@ -53,16 +53,4 @@
                 </div>
             <?php endif; ?>
         </header>
-
-        <button class="btn menu" data-jv-trigger="right" /></button>
-            <nav data-jv-content="right">
-                <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
-            </nav>
     </section>
-
-    <input type="checkbox" name="toggle" id="toggle" />
-    <label for="toggle" class="btn"></label>
-    <div class="container"></div>  
-    <div class="message">
-        <?php get_search_form() ?>
-    </div>
