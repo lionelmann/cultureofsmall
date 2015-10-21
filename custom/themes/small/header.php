@@ -19,12 +19,12 @@
     <section class="header-nav">
         <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
         
-        <button class="btn menu mobile" data-jv-trigger="right" /></button>
+        <button class="btn menu" data-jv-trigger="right" /></button>
         <nav data-jv-content="right">
             <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
         </nav>
         <input type="checkbox" name="toggle" id="toggle" />
-        <label for="toggle" class="btn mobile"></label>
+        <!--<label for="toggle" class="btn mobile"></label>-->
         <div class="container"></div>  
         <div class="message">
             <?php get_search_form() ?>
