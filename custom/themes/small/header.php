@@ -15,7 +15,7 @@
 <body <?php body_class(); ?>>
 
 <?php //include_once("analyticstracking.php") ?>
-<?php if(!is_page_template('template-home.php')): ?>
+<?php if(!is_home()): ?>
     <section class="header-nav">
         <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>') ); ?>
         
@@ -34,11 +34,11 @@
 
     <section role="banner">
         <header>
-            <?php if(is_page_template('template-home.php') || is_tax( 'community' )) : ?>
+            <?php if(is_home() || is_tax( 'community' )) : ?>
                 <div class="cta">
                     <a href="/submit-a-story">Submit a Story</a>
                 </div>
-                <a href="/home"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-small-bw.png" class=" animated fadeInDown"></a>
+                <a href="/"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-small-bw.png" class=" animated fadeInDown"></a>
                 <div class="cta">
                     <a href="/about-us">Find out More</a>
                 </div>

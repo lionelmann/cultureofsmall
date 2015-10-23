@@ -1,17 +1,31 @@
-<html>
-<head>
-    <link rel='stylesheet' href='<?php bloginfo('template_url' ); ?>/style.css' async='async' type='text/css' media='all' />
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
-<body>
+<?php get_header();?>
 
-<section role="hero" class="center">
+<!-- Loop starts -->
+<?php if(have_posts()):while(have_posts()):the_post();?>
 
-    <img src='<?php bloginfo('template_url' ); ?>/dist/images/placeholder.png'>
-    <div style="position: absolute; bottom: 50; left: 50%;"><a href="https://www.facebook.com/cultureofsmall"><i style="color: rgb(55, 151, 219);" class="fa fa-facebook-square fa-2x"></i></a>
-    </div>
-   
+<!-- Get post thumbnail url -->
+<?php
+    $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "half-banner" );
+?>
+
+<!-- Banner with Title -->
+<section role="hero" class="center" style="background-image: url(<?php echo $src[0]; ?>);">
+    <header>
+        <hgroup>
+            <h1 class="headline animated fadeInUp"><?php the_title(); ?><h1>
+        </hgroup>
+    </header>
 </section>
 
-</body>
-</html>
+<!-- Main Article -->
+<main>
+    <article class="center">
+        <?php the_content(); ?>
+    </article>
+</main>
+
+<?php endwhile; else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+<?php get_footer();?>
