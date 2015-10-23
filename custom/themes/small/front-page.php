@@ -20,8 +20,8 @@
         'post_type' => 'post',
         'posts_per_page' => 9,
         'paged' =>  $paged,
-        'post__not_in' => get_option( 'sticky_posts' ),
-        'ignore_sticky_posts' => 1,
+        //'post__not_in' => get_option( 'sticky_posts' ),
+        //'ignore_sticky_posts' => 1,
 ); 
 
 $the_query = new WP_Query( $args ); ?>
