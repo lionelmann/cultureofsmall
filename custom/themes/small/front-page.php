@@ -1,8 +1,4 @@
-<?php 
-/*
- * Template Name: Home
- */
-get_header();?>
+<?php get_header();?>
 
 <main>
     <div class="nav-home">
